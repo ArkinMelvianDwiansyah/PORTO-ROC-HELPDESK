@@ -1,8 +1,12 @@
-﻿# UTF-8 Script to build the modular tabbed documentation site for WIFI-ID NOTES ROC REGIONAL 5
+# UTF-8 Script to build the modular tabbed documentation site for WIFI-ID NOTES ROC REGIONAL 5
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
-$blocks = Get-Content -Raw -Encoding UTF8 "all_blocks_complete.json" | ConvertFrom-Json
-$imgMap = Get-Content -Raw -Encoding UTF8 "image_map.json" | ConvertFrom-Json
+$rootDir = Split-Path -Parent $PSScriptRoot
+$blocksFile = Join-Path $rootDir "data\all_blocks_complete.json"
+$imgMapFile = Join-Path $rootDir "data\image_map.json"
+
+$blocks = Get-Content -Raw -Encoding UTF8 $blocksFile | ConvertFrom-Json
+$imgMap = Get-Content -Raw -Encoding UTF8 $imgMapFile | ConvertFrom-Json
 
 $blockMap = @{}
 foreach ($prop in $blocks.psobject.properties) {
@@ -1534,5 +1538,6 @@ $fullTpl = @'
 
 $masterHtml = $fullTpl.Replace("__TAB1_HTML__", $tab1Html).Replace("__TAB2_HTML__", $tab2Html).Replace("__TAB3_HTML__", $tab3Html).Replace("__TAB4_HTML__", $tab4Html).Replace("__TAB5_HTML__", $tab5Html).Replace("__TAB6_HTML__", $tab6Html).Replace("__TAB7_HTML__", $tab7Html).Replace("__TAB_E2E_HTML__", $tabE2EHtml).Replace("__TAB8_HTML__", $tab8Html)
 
-[System.IO.File]::WriteAllText("$PSScriptRoot\index.html", $masterHtml, [System.Text.Encoding]::UTF8)
-Write-Output "SUCCESS! New tabbed index.html generated cleanly."
+$outputPath = Join-Path $rootDir "index.html"
+[System.IO.File]::WriteAllText($outputPath, $masterHtml, [System.Text.Encoding]::UTF8)
+Write-Output "SUCCESS! New tabbed index.html generated cleanly at $outputPath"

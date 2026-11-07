@@ -1,6 +1,6 @@
 # 🌐 PORTO-ROC-HELPDESK
 ### **WiFi.id Notes & Standard Operating Procedures (SOP) Interactive Knowledge Base**
-> *Dokumentasi Teknis dan Panduan Pemecahan Masalah (Troubleshooting) Operasional Jaringan WiFi.id / WiFi Managed Service (WMS Lite & WMS Reguler) &mdash; ROC Regional 5 & CCAN Witel.*
+> *Dokumentasi Teknis dan Panduan Pemecahan Masalah (Troubleshooting) Operasional Jaringan WiFi.id / WiFi Managed Service (WMS Lite & WMS Reguler) — ROC Regional 5 & CCAN Witel.*
 
 ---
 
@@ -8,6 +8,32 @@
 **PORTO-ROC-HELPDESK** adalah portal dokumentasi operasional dan portofolio interaktif berbasis Single-Page Application (SPA) modern yang menyajikan standarisasi penanganan gangguan (*troubleshooting*), konfigurasi perangkat (*provisioning*), rekapitulasi data (*reconciliation*), dan penelusuran paket data end-to-end (*packet tracing*) dari level Access Point pelanggan hingga Core BRAS Gateway.
 
 Sistem dirancang dengan arsitektur **Clean Monochrome Aesthetic** (Zinc-950 Dark Theme) yang responsif, dilengkapi fitur pencarian instan (*Ctrl+K Search Modal*), *Lightbox Image Viewer*, *One-Click Code Snippet Copy*, dan *Floating Glossary Drawer* untuk 25+ istilah jaringan telekomunikasi.
+
+---
+
+## 📂 Struktur Direktori Repositori
+
+```text
+PORTO-ROC-HELPDESK/
+├── assets/                  # Seluruh aset visual (130+ gambar diagram, tangkapan layar CLI, topologi)
+│   └── images/
+├── data/                    # Database raw JSON Notion & dump chunk (all_blocks, image_map, chunks)
+│   ├── all_blocks.json
+│   ├── all_blocks_complete.json
+│   ├── image_map.json
+│   └── chunks/
+├── docs/                    # Dokumentasi lengkap & modul catatan SOP dalam format Markdown
+│   ├── FULL_WIFI_ID_NOTES.md
+│   ├── modules/             # 23 modul SOP format Markdown individual
+│   └── archive_prd/         # Arsip dokumen referensi
+├── scripts/                 # Seluruh skrip otomatisasi pipeline & web generator PowerShell
+│   ├── generate_tabbed_site.ps1
+│   ├── e2e_tracing_content.html
+│   └── ...                  # Skrip crawling, parsing, dan verifikasi
+├── .gitignore               # Konfigurasi pengabaian file sampah & dump sementara
+├── index.html               # Main Interactive Single-Page Application (Entry Point Utama)
+└── README.md                # Dokumentasi Portofolio Repositori
+```
 
 ---
 
@@ -40,7 +66,7 @@ Sistem dirancang dengan arsitektur **Clean Monochrome Aesthetic** (Zinc-950 Dark
 ## 🛠️ Tech Stack & Arsitektur Kode
 - **Markup & Presentation**: Semantic HTML5, Tailwind CSS (via CDN JIT), Font Inter & JetBrains Mono.
 - **Client Logic**: Vanilla JavaScript ES6+ (Zero external npm framework dependencies, murni client-side rendering).
-- **Data Source**: Diekstrak dan dirender dari repositori dokumentasi Notion operasional resmi dengan pipeline PowerShell (`generate_tabbed_site.ps1`).
+- **Data Source**: Diekstrak dan dirender dari repositori dokumentasi Notion operasional resmi dengan pipeline PowerShell (`scripts/generate_tabbed_site.ps1`).
 
 ---
 
@@ -64,4 +90,4 @@ Karena proyek ini bersifat murni statis, tidak memerlukan Node.js atau instalasi
 
 ---
 **Author / Maintainer:** Arkin Melvian Dwiansyah  
-*ROC Regional 5 &bull; Operations & Helpdesk*
+*ROC Regional 5 • Operations & Helpdesk*
