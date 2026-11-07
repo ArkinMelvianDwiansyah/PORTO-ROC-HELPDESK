@@ -1,0 +1,553 @@
+<USER_REQUEST>
+ada tambahan untuk swagr wag /portal dll nya ini saya berikan , masukan semua yang penting ga penting penting banget gapapa untuk detailing kayak kemaren 
+
+[07/11/2026 22:47] DATIN ROC Mas Adi Sudarto: SWAGGR-D5-KBL-CS#show interfaces te1/1/3
+TenGigabitEthernet1/1/3 is down, line protocol is down (notconnect) 
+  Hardware is Ten Gigabit Ethernet, address is f4bd.9e32.870f (bia f4bd.9e32.870f)
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not set
+  Auto-duplex, Auto-speed, link type is auto, media type is unknown
+  input flow-control is on, output flow-control is unsupported 
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 6y40w, output 6y40w, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/2000/0/0 (size/max/drops/flushes); Total output drops: 475334
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     594849 packets input, 271686600 bytes, 0 no buffer
+     Received 2335 broadcasts (2016 multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 2016 multicast, 0 pause input
+     0 input packets with dribble condition detected
+     1675863 packets output, 1341602432 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     1433 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+SWAGGR-D5-KBL-CS#show interfaces te1/1/1
+TenGigabitEthernet1/1/1 is up, line protocol is up (connected) 
+  Hardware is Ten Gigabit Ethernet, address is f4bd.9e32.870d (bia f4bd.9e32.870d)
+  Description: TO WAC05-D5-KBL-CS Port MGMT
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not set
+  Full-duplex, 1000Mb/s, link type is auto, media type is 10/100/1000BaseTX SFP
+  input flow-control is on, output flow-control is unsupported 
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input never, output 00:00:00, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/2000/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     10572145 packets input, 1249573801 bytes, 0 no buffer
+     Received 10422602 broadcasts (10422457 multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 10422457 multicast, 0 pause input
+     0 input packets with dribble condition detected
+     140450743 packets output, 14249966388 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+SWAGGR-D5-KBL-CS#show interfaces te1/1/2
+TenGigabitEthernet1/1/2 is up, line protocol is up (connected) 
+  Hardware is Ten Gigabit Ethernet, address is f4bd.9e32.870e (bia f4bd.9e32.870e)
+  Description: TO WAC06-D5-KBL-CS Port MGMT
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not set
+  Full-duplex, 1000Mb/s, link type is auto, media type is 10/100/1000BaseTX SFP
+  input flow-control is on, output flow-control is unsupported 
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input never, output 00:00:00, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/2000/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     10813919 packets input, 1418018292 bytes, 0 no buffer
+     Received 10422635 broadcasts (10422466 multicasts)
+     0 runts, 0 giants, 0 throttles
+[07/11/2026 22:47] DATIN ROC Mas Adi Sudarto: 0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 10422466 multicast, 0 pause input
+     0 input packets with dribble condition detected
+     141101812 packets output, 15137973247 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+SWAGGR-D5-KBL-CS#show interfaces te1/1/4
+TenGigabitEthernet1/1/4 is down, line protocol is down (notconnect) 
+  Hardware is Ten Gigabit Ethernet, address is f4bd.9e32.8710 (bia f4bd.9e32.8710)
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not set
+  Auto-duplex, Auto-speed, link type is auto, media type is unknown
+  input flow-control is on, output flow-control is unsupported 
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 6y40w, output 6y40w, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/2000/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     92968 packets input, 15961804 bytes, 0 no buffer
+     Received 8008 broadcasts (2668 multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 2668 multicast, 0 pause input
+     0 input packets with dribble condition detected
+     182069 packets output, 177917325 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     128 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+SWAGGR-D5-KBL-CS#sho vlan bri           
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Te1/0/5, Te1/0/6, Te1/0/8
+                                                Te1/0/9, Te1/0/10, Te1/0/12
+535  p2p-PE                           active    
+580  VLAN-P2P-WC-U17-TEMP             active    
+1002 fddi-default                     act/unsup 
+1003 token-ring-default               act/unsup 
+1004 fddinet-default                  act/unsup 
+1005 trnet-default                    act/unsup 
+1102 seamless@wifi.id-internet        active    
+1245 ssid_iot                         active    
+1370 ssid_wifi.id                     active    
+1372 ssid_wms                         active    
+1378 telkom.id-wag                    active    
+1379 SSID_seamless                    active    
+1382 ssid_wms_WAG-KBL                 active    
+2850 VL_AP_WLC02_KBL_WIFI6_2850       active    Te1/1/3
+2851 VL_AP_WLC02_KBL_WIFI6_2851       active    
+2852 VL_AP_WLC02_KBL_WIFI6_2852       active    
+2853 VL_AP_WLC02_KBL_WIFI6_2853       active    
+2854 VL_AP_WLC02_KBL_WIFI6_2854       active    
+2855 VL_AP_WLC02_KBL_WIFI6_2855       active    
+2856 VL_AP_WLC02_KBL_WIFI6_2856       active    
+2860 VLANAP2860_WLC01_KBL             active    
+2861 VLANAP2861_WLC02_KBL             active    
+2862 VL_AP_WLC02_KBL_WIFI6_2862       active    
+2863 VL_AP_WLC02_KBL_WIFI6_2863       active    
+2864 VL_AP_WLC02_KBL_WIFI6_2864       active    
+2865 VL_AP_WLC02_KBL_WIFI6_2865       active    
+2866 VL_AP_WLC02_KBL_WIFI6_2866       active    
+2867 VL_AP_WLC02_KBL_WIFI6_2867       active    
+2870 VL_AP_WLC02_KBL_WIFI6_2870       active    
+2871 VL_AP_WLC02_KBL_WIFI6_2871       active    
+2872 VL_AP_WLC02_KBL_WIFI6_2872       active    
+          
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+2873 VL_AP_WLC02_KBL_WIFI6_2873       active    
+2874 VL_AP_WLC02_KBL_WIFI6_2874       active    
+2875 VL_AP_WLC02_KBL_WIFI6_2875       active
+[07/11/2026 22:47] DATIN ROC Mas Adi Sudarto: 2880 VL_AP_WLC02_KBL_WIFI6_2880       active    
+2881 VL_AP_WLC02_KBL_WIFI6_2881       active    
+2882 VL_AP_WLC02_KBL_WIFI6_2882       active    
+2883 VL_AP_WLC02_KBL_WIFI6_2883       active    
+2884 VL_AP_WLC02_KBL_WIFI6_2884       active    
+2885 VL_AP_WLC02_KBL_WIFI6_2885       active    
+2890 VL_AP_WLC02_KBL_WIFI6_2890       active    
+2891 VL_AP_WLC02_KBL_WIFI6_2891       active    
+2892 VL_AP_WLC02_KBL_WIFI6_2892       active    
+2893 VL_AP_WLC02_KBL_WIFI6_2893       active    
+2894 VL_AP_WLC02_KBL_WIFI6_2894       active    
+2895 VL_AP_WLC02_KBL_WIFI6_2895       active    
+4035 MGMT                             active    Te1/1/1, Te1/1/2, Te1/1/4
+4090 MGMT-PROCERA                     active    
+SWAGGR-D5-KBL-CS#show interfaces te1/0/5
+TenGigabitEthernet1/0/5 is down, line protocol is down (notconnect) 
+  Hardware is Ten Gigabit Ethernet, address is f4bd.9e32.8705 (bia f4bd.9e32.8705)
+  MTU 1500 bytes, BW 10000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not set
+  Auto-duplex, Auto-speed, link type is auto, media type is unknown
+  input flow-control is on, output flow-control is unsupported 
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/2000/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 0 multicast, 0 pause input
+     0 input packets with dribble condition detected
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+SWAGGR-D5-KBL-CS#sho mac
+SWAGGR-D5-KBL-CS#sho mac-ad
+SWAGGR-D5-KBL-CS#sho mac ? 
+  access-group   MAC access-group
+  address-table  MAC forwarding table
+
+SWAGGR-D5-KBL-CS#sho mac ad
+SWAGGR-D5-KBL-CS#sho mac address-table ?
+  address               Address to lookup in the table
+  aging-time            MAC address table aging parameters
+  control-packet-learn  Control packet MAC learning parameter
+  count                 Number of MAC addresses in the table
+  dynamic               List dynamic MAC addresses
+  interface             List MAC adresses on a specific interface
+  learning              Display learning on VLAN or interface
+  move                  MAC Move information
+  multicast             List multicast MAC addresses
+  notification          MAC notification parameters and history table
+  secure                List secure MAC addresses
+  static                List static MAC addresses
+  vlan                  List MAC addresses on a specific vlan
+  |                     Output modifiers
+  <cr>                  <cr>
+
+SWAGGR-D5-KBL-CS#sho mac address-table vl
+SWAGGR-D5-KBL-CS#sho mac address-table vlan ?
+  <1-4094>  VLAN number
+
+SWAGGR-D5-KBL-CS#sho mac address-table vlan 2851
+          Mac Address Table
+-------------------------------------------
+[07/11/2026 22:47] DATIN ROC Mas Adi Sudarto: Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+2851    0072.7828.1a88    DYNAMIC     Po10
+2851    0072.7828.2210    DYNAMIC     Po10
+2851    0072.782c.1a40    DYNAMIC     Po10
+2851    0072.782c.3798    DYNAMIC     Po10
+2851    0077.8dd6.17e8    DYNAMIC     Po10
+2851    00a5.bf72.5cc8    DYNAMIC     Po10
+2851    00b6.705e.1998    DYNAMIC     Po10
+2851    00b6.705e.2260    DYNAMIC     Po10
+2851    00b6.705e.3e48    DYNAMIC     Po10
+2851    00b6.705e.4560    DYNAMIC     Po10
+2851    00b6.7060.2438    DYNAMIC     Po10
+2851    24d7.9c87.44c8    DYNAMIC     Po10
+2851    24d7.9c87.4640    DYNAMIC     Po10
+2851    24d7.9c87.4770    DYNAMIC     Po10
+2851    24d7.9c87.47b4    DYNAMIC     Po10
+2851    24d7.9c87.d834    DYNAMIC     Po10
+2851    308b.b260.0998    DYNAMIC     Po10
+2851    308b.b262.1170    DYNAMIC     Po10
+2851    345d.a848.2260    DYNAMIC     Po10
+2851    345d.a848.6c50    DYNAMIC     Po10
+2851    345d.a848.85bc    DYNAMIC     Po10
+2851    345d.a848.9068    DYNAMIC     Po10
+2851    345d.a848.934c    DYNAMIC     Po10
+2851    345d.a848.cb80    DYNAMIC     Po10
+2851    3891.b736.2aac    DYNAMIC     Po10
+2851    3891.b736.4ad4    DYNAMIC     Po10
+2851    3891.b736.59f4    DYNAMIC     Po10
+2851    3891.b736.5ad4    DYNAMIC     Po10
+2851    3891.b736.6704    DYNAMIC     Po10
+2851    3891.b736.c588    DYNAMIC     Po10
+2851    3891.b736.d538    DYNAMIC     Po10
+2851    3891.b736.d694    DYNAMIC     Po10
+2851    3891.b736.dd38    DYNAMIC     Po10
+2851    3891.b736.df30    DYNAMIC     Po10
+2851    3891.b736.df88    DYNAMIC     Po10
+2851    3891.b736.dfec    DYNAMIC     Po10
+2851    488b.0a08.0490    DYNAMIC     Po10
+2851    488b.0a08.2150    DYNAMIC     Po10
+2851    488b.0ae4.1b18    DYNAMIC     Po10
+2851    488b.0ae6.1378    DYNAMIC     Po10
+2851    7018.a714.6598    DYNAMIC     Po10
+2851    7018.a728.0818    DYNAMIC     Po10
+2851    7018.a728.1f58    DYNAMIC     Po10
+2851    7018.a728.5808    DYNAMIC     Po10
+2851    7018.a72a.0198    DYNAMIC     Po10
+2851    7018.a72a.39f0    DYNAMIC     Po10
+2851    7018.a7c6.28e8    DYNAMIC     Po10
+2851    7486.0b5a.1598    DYNAMIC     Po10
+2851    7c21.0d88.2790    DYNAMIC     Po10
+2851    84f1.47bc.3d40    DYNAMIC     Po10
+2851    84f1.47bc.3dd0    DYNAMIC     Po10
+2851    84f1.47f4.5b58    DYNAMIC     Po10
+2851    84f1.47f8.18b8    DYNAMIC     Po10
+2851    84f1.47f8.1b80    DYNAMIC     Po10
+2851    8c1e.8055.127c    DYNAMIC     Po10
+2851    8c1e.8055.15d8    DYNAMIC     Po10
+2851    8c1e.8055.3a08    DYNAMIC     Po10
+2851    8c1e.8055.3a8c    DYNAMIC     Po10
+2851    8c1e.8055.3aa4    DYNAMIC     Po10
+2851    8c1e.8055.3b54    DYNAMIC     Po10
+2851    8c1e.8055.3be4    DYNAMIC     Po10
+2851    8c1e.8055.3d5c    DYNAMIC     Po10
+2851    a0f8.497c.1140    DYNAMIC     Po10
+2851    a0f8.49ee.0fa0    DYNAMIC     Po10
+2851    c4b3.6a10.5c00    DYNAMIC     Po10
+2851    c828.e58a.5b2c    DYNAMIC     Po10
+2851    c828.e58a.6128    DYNAMIC     Po10
+2851    c828.e58a.67e4    DYNAMIC     Po10
+2851    c828.e58a.730c    DYNAMIC     Po10
+2851    c828.e58a.b688    DYNAMIC     Po10
+2851    c828.e58a.d49c    DYNAMIC     Po10
+2851    c828.e58a.dbb8    DYNAMIC     Po10
+2851    c828.e58a.dcbc    DYNAMIC     Po10
+2851    c828.e58a.e108    DYNAMIC     Po10
+2851    c828.e58a.ee18    DYNAMIC     Po10
+2851    c828.e58a.f95c    DYNAMIC     Po10
+2851    c828.e58a.fa3c    DYNAMIC     Po10
+2851    c828.e58a.feb8    DYNAMIC     Po10
+2851    c828.e58b.0de4    DYNAMIC     Po10
+2851    c828.e58b.1080    DYNAMIC     Po10
+2851    c828.e58b.1e24    DYNAMIC     Po10
+2851    c828.e58b.223c    DYNAMIC     Po10
+2851    c828.e58b.23b0    DYNAMIC     Po10
+2851    c828.e58b.a0c0    DYNAMIC     Po10
+2851    c828.e58b.aa24    DYNAMIC     Po10
+2851    c828.e58b.bec8    DYNAMIC     Po10
+2851    c828.e58b.e180    DYNAMIC     Po10
+2851    c828.e58b.e9f4    DYNAMIC     Po10
+2851    c828.e58b.ec90    DYNAMIC     Po10
+2851    c828.e58b.f29c    DYNAMIC     Po10
+2851    c884.a148.0ec8    DYNAMIC     Po10
+2851    c884.a14a.0c80    DYNAMIC     Po10
+2851    c884.a14a.2f70    DYNAMIC     Po10
+[07/11/2026 22:47] DATIN ROC Mas Adi Sudarto: 2851    f4bd.9e32.8755    STATIC      Vl2851 
+2851    f8b7.e2c6.3950    DYNAMIC     Po10
+2851    f8b7.e2c8.47c0    DYNAMIC     Po10
+2851    f8b7.e2ca.2d40    DYNAMIC     Po10
+2851    f8b7.e2d0.6540    DYNAMIC     Po10
+2851    fc44.9f0a.45c3    DYNAMIC     Po10
+Total Mac Addresses for this criterion: 99
+SWAGGR-D5-KBL-CS#sho
+SWAGGR-D5-KBL-CS#show lldp ?
+  entry      Information for specific neighbor entry
+  errors     LLDP computational errors and overflows
+  interface  LLDP interface status and configuration
+  neighbors  LLDP neighbor entries
+  traffic    LLDP statistics
+  |          Output modifiers
+  <cr>       <cr>
+
+SWAGGR-D5-KBL-CS#show inter Po10
+Port-channel10 is up, line protocol is up (connected) 
+  Hardware is EtherChannel, address is f4bd.9e32.8701 (bia f4bd.9e32.8701)
+  Description: LAG-DOWNLINK-ME9-D5-KBL-Eth-23
+  MTU 1500 bytes, BW 20000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 54/255, rxload 7/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full-duplex, 10Gb/s, link type is auto, media type is N/A
+  input flow-control is on, output flow-control is unsupported 
+  Members in this channel: Te1/0/1 Te1/0/2 
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 4w1d, output 00:00:00, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/2000/0/0 (size/max/drops/flushes); Total output drops: 23044449
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 572304000 bits/sec, 201216 packets/sec
+  5 minute output rate 4247539000 bits/sec, 451603 packets/sec
+     50991789523790 packets input, 47620257043403169 bytes, 0 no buffer
+     Received 6046900572 broadcasts (668994499 multicasts)
+     0 runts, 9 giants, 0 throttles 
+     28 input errors, 15 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 668994499 multicast, 0 pause input
+     0 input packets with dribble condition detected
+     82307932805788 packets output, 589163247151913686 bytes, 0 underruns
+     0 output errors, 0 collisions, 3 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+SWAGGR-D5-KBL-CS#sho
+SWAGGR-D5-KBL-CS#show inter
+SWAGGR-D5-KBL-CS#show interfaces Te1/0/1
+TenGigabitEthernet1/0/1 is up, line protocol is up (connected) 
+  Hardware is Ten Gigabit Ethernet, address is f4bd.9e32.8701 (bia f4bd.9e32.8701)
+  Description: TO ME9-D5-KBL 1/1/19
+  MTU 1500 bytes, BW 10000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 43/255, rxload 7/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not set
+  Full-duplex, 10Gb/s, link type is auto, media type is SFP-10GBase-LR
+  input flow-control is on, output flow-control is unsupported 
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:19, output 00:00:12, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/2000/0/0 (size/max/drops/flushes); Total output drops: 16745837
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 310677000 bits/sec, 111942 packets/sec
+  5 minute output rate 1715151000 bits/sec, 183449 packets/sec
+     25588423225956 packets input, 21499616586058213 bytes, 0 no buffer
+     Received 2169711996 broadcasts (1948071051 multicasts)
+     0 runts, 0 giants, 0 throttles 
+     10 input errors, 8 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 1948071051 multicast, 0 pause input
+     0 input packets with dribble condition detected
+     43770886774662 packets output, 331021655019416605 bytes, 0 underruns
+     0 output errors, 0 collisions, 5 interface resets
+     2283988 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+SWAGGR-D5-KBL-CS#sho
+SWAGGR-D5-KBL-CS#show inter de
+SWAGGR-D5-KBL-CS#show inter des
+SWAGGR-D5-KBL-CS#show inter description 
+Interface                      Status         Protocol Description
+[07/11/2026 22:47] DATIN ROC Mas Adi Sudarto: Vl1                            admin down     down     
+Vl535                          up             up       SWAGGR to PE P2P
+Vl580                          up             up       
+Vl2850                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2850
+Vl2851                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2851
+Vl2852                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2852
+Vl2853                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2853
+Vl2854                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2854
+Vl2855                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2855
+Vl2856                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2856
+Vl2860                         up             up       VLAN_AP_2860_WLC01_KBL
+Vl2861                         up             up       VLAN_AP_2861_WLC02_KBL
+Vl2862                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2862
+Vl2863                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2863
+Vl2864                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2864
+Vl2865                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2865
+Vl2866                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2866
+Vl2867                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2867
+Vl2870                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2870
+Vl2871                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2871
+Vl2872                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2872
+Vl2873                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2873
+Vl2874                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2874
+Vl2875                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2875
+Vl2880                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2880
+Vl2881                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2881
+Vl2882                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2882
+Vl2883                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2883
+Vl2884                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2884
+Vl2885                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2885
+Vl2890                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2890
+Vl2891                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2891
+Vl2892                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2892
+Vl2893                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2893
+Vl2894                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2894
+Vl2895                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2895
+Vl4035                         up             up       MGMT 
+Vl4090                         down           down     MGMT-PROCERA
+Gi0/0                          admin down     down     
+Te1/0/1                        up             up       TO ME9-D5-KBL 1/1/19
+Te1/0/2                        up             up       TO ME9-D5-KBL 1/1/21
+Te1/0/3                        up             up       TO WLC01-D5-KBL-CS Port 1
+Te1/0/4                        up             up       TO WLC02-D5-KBL-CS Port 1
+Te1/0/5                        down           down     
+Te1/0/6                        down           down     
+Te1/0/7                        up             up       To WAG-D5-KBL Te 6/0/0
+Te1/0/8                        down           down     
+Te1/0/9                        down           down     
+Te1/0/10                       down           down     
+Te1/0/11                       down           down     
+Te1/0/12                       down           down     to-SW-NEXUS-PROCERA
+Te1/1/1                        up             up       TO WAC05-D5-KBL-CS Port MGMT
+[07/11/2026 22:47] DATIN ROC Mas Adi Sudarto: Te1/1/2                        up             up       TO WAC06-D5-KBL-CS Port MGMT
+Te1/1/3                        down           down     
+Te1/1/4                        down           down     
+Po10                           up             up       LAG-DOWNLINK-ME9-D5-KBL-Eth-23
+Lo85401                        up             up       WLC01-D5-KBL-CS Port2 to WAG-D5-KBL Te 4/1/0
+Lo85402                        up             up       WLC02-D5-KBL-CS Port2 to WAG-D5-KBL Te 6/0/0
+SWAGGR-D5-KBL-CS#
+[07/11/2026 22:50] DATIN ROC Mas Adi Sudarto: SWAGGR-D5-KBL-CS#sho lldp neighbors 
+Capability codes:
+    (R) Router, (B) Bridge, (T) Telephone, (C) DOCSIS Cable Device
+    (W) WLAN Access Point, (P) Repeater, (S) Station, (O) Other
+
+Device ID           Local Intf     Hold-time  Capability      Port ID
+ME9-D5-KBL-OLD      Te1/0/2        120        B,R             GigabitEthernet1/1/21
+ME9-D5-KBL-OLD      Te1/0/1        120        B,R             GigabitEthernet1/1/19
+WAG-D5-KBL          Te1/0/7        120        B,R             GigabitEthernet6/0/0
+
+Total entries displayed: 3
+
+SWAGGR-D5-KBL-CS#
+[07/11/2026 22:53] DATIN ROC Mas Adi Sudarto: WAG-D5-KBL>disp lldp neighbor  brief 
+Local Intf              Neighbor Dev         Neighbor Intf        Exptime (sec)
+------------------------------------------------------------------------------- 
+GigabitEthernet1/0/0    PE-D5-KBL-HSI        654                            104
+GigabitEthernet1/1/0    ME9-D5-KBL-OLD       GigabitEthernet3/1/22          113
+GigabitEthernet2/0/0    WAC03-D5-KBL-CS.wifi.idTe1/2                           94
+GigabitEthernet2/1/0    ME9-D5-KBL-OLD       GigabitEthernet11/1/6          111
+GigabitEthernet3/1/0    WAC04-D5-KBL-CS.wifi.idTe1/3                          117
+GigabitEthernet4/0/0    PE-D5-KBL-HSI        600                             99
+GigabitEthernet6/0/0    SWAGGR-D5-KBL-CS.SWAGGRKBL.wifi.idTe1/0/7                        109
+GigabitEthernet6/1/0    WAC03-D5-KBL-CS.wifi.idTe5/4                           92
+GigabitEthernet7/0/0    L2SW-5KBL-HW01       XGigabitEthernet1/0/10          91
+GigabitEthernet7/1/0    PE-D5-KBL-HSI        678                            119
+GigabitEthernet8/0/0    ME9-D5-KBL-OLD       GigabitEthernet7/1/3            95
+<WAG-D5-KBL>
+[07/11/2026 22:55] DATIN ROC Mas Adi Sudarto: WAG-D5-KBL>disp inte des | in 6/0/0
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(E): E-Trunk down
+(b): BFD down
+(B): Bit-error-detection down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description            
+GE6/0/0(10G)                  up      down     DOWNLINK TO WAC06-D5-KBL-CS
+GE6/0/0.208                   up      up       ssid_biz_direct WLC02-D5-KBL-CS
+GE6/0/0.1101                  up      up       SSID_seamless@wifi.id-internet TO WAC06-D5-KBL-CS
+GE6/0/0.1102                  up      up       SSID_seamless@wifi.id-internet TO WLC02-D5-KBL-CS
+GE6/0/0.1245                  up      up       WMS-AP x IoT 
+GE6/0/0.1370                  up      up       SSID_wifi.id TO WAC06-D5-KBL-CS
+GE6/0/0.1372                  up      up       SSID_wms TO WAC06-D5-KBL-CS
+GE6/0/0.1373                  up      up       ssid_biz_wms WLC02-D5-KBL-CS
+GE6/0/0.1378                  up      up       SSID_telkom.id TO WLC01-D5-KBL-CS
+GE6/0/0.1382                  up      up       SSID_WMS to WLC02-D5-KBL-CS direct WAG
+[07/11/2026 22:56] DATIN ROC Mas Adi Sudarto: WAG-D5-KBL>disp lldp neighbor  brief 
+Local Intf              Neighbor Dev         Neighbor Intf        Exptime (sec)
+------------------------------------------------------------------------------- 
+GigabitEthernet1/0/0    PE-D5-KBL-HSI        654                            113
+GigabitEthernet1/1/0    ME9-D5-KBL-OLD       GigabitEthernet3/1/22          111
+GigabitEthernet2/0/0    WAC03-D5-KBL-CS.wifi.idTe1/2                           93
+GigabitEthernet2/1/0    ME9-D5-KBL-OLD       GigabitEthernet11/1/6          110
+GigabitEthernet3/1/0    WAC04-D5-KBL-CS.wifi.idTe1/3                          115
+GigabitEthernet4/0/0    PE-D5-KBL-HSI        600                            110
+GigabitEthernet6/0/0    SWAGGR-D5-KBL-CS.SWAGGRKBL.wifi.idTe1/0/7                        106
+GigabitEthernet6/1/0    WAC03-D5-KBL-CS.wifi.idTe5/4                          120
+GigabitEthernet7/0/0    L2SW-5KBL-HW01       XGigabitEthernet1/0/10         119
+GigabitEthernet7/1/0    PE-D5-KBL-HSI        678                            104
+GigabitEthernet8/0/0    ME9-D5-KBL-OLD       GigabitEthernet7/1/3            93
+<WAG-D5-KBL>
+
+
+
+untuk detailing lainnya akan ssaya kirimkan kembali , 
+
+
+
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-07T23:13:55+07:00.
+</ADDITIONAL_METADATA>

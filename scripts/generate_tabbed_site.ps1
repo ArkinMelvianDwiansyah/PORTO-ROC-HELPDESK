@@ -1297,6 +1297,20 @@ $fullTpl = @'
             </div>
             <p class="text-[11px] text-zinc-400 mt-1 leading-relaxed">Control and Provisioning of Wireless Access Points. Protokol tunneling antara AP dan WLC menggunakan port UDP 5246 (Control) dan UDP 5247 (Data).</p>
           </div>
+          <div class="glossary-item p-3 rounded-xl bg-zinc-900/60 border border-zinc-800/80">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-bold text-white">LLDP (Link Layer Discovery)</span>
+              <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-400">IEEE 802.1AB</span>
+            </div>
+            <p class="text-[11px] text-zinc-400 mt-1 leading-relaxed">Protokol Layer 2 netral-vendor untuk menemukan perangkat tetangga yang terhubung secara fisik pada port switch/router (misal mendeteksi WAG pada port Te1/0/7).</p>
+          </div>
+          <div class="glossary-item p-3 rounded-xl bg-zinc-900/60 border border-zinc-800/80">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-bold text-white">SFP-10GBase-LR</span>
+              <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-400">Optik Transceiver</span>
+            </div>
+            <p class="text-[11px] text-zinc-400 mt-1 leading-relaxed">Modul optik 10 Gigabit Ethernet Long Range (panjang gelombang laser 1310nm Single-Mode Fiber) dengan jangkauan transmisi hingga 10 kilometer.</p>
+          </div>
         </div>
       </div>
 
@@ -1313,6 +1327,13 @@ $fullTpl = @'
               <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-400">ISG / BNG</span>
             </div>
             <p class="text-[11px] text-zinc-400 mt-1 leading-relaxed">Gateway penegak sesi subscriber klien. Mengatur pembatasan bandwidth (shaping), kuota, dan interkoneksi ke server otentikasi RADIUS AAA.</p>
+          </div>
+          <div class="glossary-item p-3 rounded-xl bg-zinc-900/60 border border-zinc-800/80">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-bold text-white">PE &amp; HSI (Core Internet Gateway)</span>
+              <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-400">Core Egress</span>
+            </div>
+            <p class="text-[11px] text-zinc-400 mt-1 leading-relaxed">Provider Edge (PE) Router yang menyediakan layanan High-Speed Internet (HSI), CGNAT IP pooling, dan eBGP routing ke backbone internet global.</p>
           </div>
           <div class="glossary-item p-3 rounded-xl bg-zinc-900/60 border border-zinc-800/80">
             <div class="flex items-center justify-between">
