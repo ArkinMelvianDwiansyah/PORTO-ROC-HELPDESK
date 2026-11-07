@@ -1,0 +1,13 @@
+$f = Get-Item "index.html"
+Write-Output "File size: $($f.Length) bytes"
+$content = [System.IO.File]::ReadAllText("$PSScriptRoot\index.html", [System.Text.Encoding]::UTF8)
+Write-Output "Contains tab-topologi: $($content.Contains('tab-topologi'))"
+Write-Output "Contains tab-ticketing: $($content.Contains('tab-ticketing'))"
+Write-Output "Contains tab-ganti-ap: $($content.Contains('tab-ganti-ap'))"
+Write-Output "Contains tab-wp-error: $($content.Contains('tab-wp-error'))"
+Write-Output "Contains tab-gpon-ont: $($content.Contains('tab-gpon-ont'))"
+Write-Output "Contains tab-mojang: $($content.Contains('tab-mojang'))"
+Write-Output "Contains tab-tracing: $($content.Contains('tab-tracing'))"
+Write-Output "Contains tab-quick-ops: $($content.Contains('tab-quick-ops'))"
+Write-Output "Contains mangled âš: $($content.Contains('âš'))"
+Write-Output "Topology image included: $($content.Contains('340bc60a-349d-80f7-8bf2-cbee5f186482.png'))"

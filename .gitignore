@@ -1,0 +1,17 @@
+# Temporary scratch files & test payloads
+temp_*
+test_*
+payload.json
+page_chunk.json
+notion_page.html
+root_block.json
+rendered_page.txt
+
+# Archives
+*.zip
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
