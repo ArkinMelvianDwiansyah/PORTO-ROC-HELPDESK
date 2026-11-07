@@ -33,7 +33,11 @@
         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
         Blueprint Provisioning CCNA/CCNP
       </a>
-      <button onclick="toggleGlossary()" class="px-3 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-xs text-white transition-colors flex items-center gap-1.5 font-mono cursor-pointer ml-auto">
+      <button onclick="toggleExplainer()" class="px-3 py-1 rounded-lg bg-emerald-950/90 hover:bg-emerald-900 border border-emerald-700 text-xs text-emerald-300 hover:text-white transition-colors flex items-center gap-1.5 font-mono font-bold cursor-pointer mr-2">
+        <span class="text-xs">ðŸ§ </span>
+        Jelasin Dong!
+      </button>
+      <button onclick="toggleGlossary()"' class="px-3 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-xs text-white transition-colors flex items-center gap-1.5 font-mono cursor-pointer ml-auto">
         <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         Buka Glosarium Istilah
       </button>
@@ -187,7 +191,12 @@
           </div>
           <div class="mt-3 pt-2 border-t border-zinc-800 text-[9px] font-mono text-zinc-400">
             FGL2702LHYR &middot; 13 Klien
-          </div>
+          
+          <button onclick="openExplainerHop('01'); event.preventDefault(); event.stopPropagation();" class="mt-2 text-[9px] font-mono px-2 py-0.5 rounded bg-zinc-800/90 hover:bg-emerald-950 text-zinc-300 hover:text-emerald-300 border border-zinc-700 hover:border-emerald-700 transition-colors flex items-center justify-between w-full cursor-pointer">
+            <span>ðŸ§  Jelasin Hop 01</span>
+            <span>&rarr;</span>
+          </button>
+        </div>
         </a>
 
         <div class="flex items-center text-zinc-600">&rarr;</div>
@@ -205,7 +214,12 @@
           </div>
           <div class="mt-3 pt-2 border-t border-zinc-800 text-[9px] font-mono text-zinc-400">
             Rx -21.1 dBm &middot; 6.3 Km
-          </div>
+          
+          <button onclick="openExplainerHop('02'); event.preventDefault(); event.stopPropagation();" class="mt-2 text-[9px] font-mono px-2 py-0.5 rounded bg-zinc-800/90 hover:bg-emerald-950 text-zinc-300 hover:text-emerald-300 border border-zinc-700 hover:border-emerald-700 transition-colors flex items-center justify-between w-full cursor-pointer">
+            <span>ðŸ§  Jelasin Hop 02</span>
+            <span>&rarr;</span>
+          </button>
+        </div>
         </a>
 
         <div class="flex items-center text-zinc-600">&rarr;</div>
@@ -223,7 +237,12 @@
           </div>
           <div class="mt-3 pt-2 border-t border-zinc-800 text-[9px] font-mono text-zinc-400">
             Smartgroup1 &middot; 0 CRC
-          </div>
+          
+          <button onclick="openExplainerHop('03'); event.preventDefault(); event.stopPropagation();" class="mt-2 text-[9px] font-mono px-2 py-0.5 rounded bg-zinc-800/90 hover:bg-emerald-950 text-zinc-300 hover:text-emerald-300 border border-zinc-700 hover:border-emerald-700 transition-colors flex items-center justify-between w-full cursor-pointer">
+            <span>ðŸ§  Jelasin Hop 03</span>
+            <span>&rarr;</span>
+          </button>
+        </div>
         </a>
 
         <div class="flex items-center text-zinc-600">&rarr;</div>
@@ -241,7 +260,12 @@
           </div>
           <div class="mt-3 pt-2 border-t border-zinc-800 text-[9px] font-mono text-zinc-400">
             VSI WIFI_6_SBU_2851
-          </div>
+          
+          <button onclick="openExplainerHop('04'); event.preventDefault(); event.stopPropagation();" class="mt-2 text-[9px] font-mono px-2 py-0.5 rounded bg-zinc-800/90 hover:bg-emerald-950 text-zinc-300 hover:text-emerald-300 border border-zinc-700 hover:border-emerald-700 transition-colors flex items-center justify-between w-full cursor-pointer">
+            <span>ðŸ§  Jelasin Hop 04</span>
+            <span>&rarr;</span>
+          </button>
+        </div>
         </a>
 
         <div class="flex items-center text-zinc-600">&rarr;</div>
@@ -259,7 +283,12 @@
           </div>
           <div class="mt-3 pt-2 border-t border-zinc-800 text-[9px] font-mono text-zinc-400">
             MPLS LDP &middot; dot1q 2851
-          </div>
+          
+          <button onclick="openExplainerHop('05'); event.preventDefault(); event.stopPropagation();" class="mt-2 text-[9px] font-mono px-2 py-0.5 rounded bg-zinc-800/90 hover:bg-emerald-950 text-zinc-300 hover:text-emerald-300 border border-zinc-700 hover:border-emerald-700 transition-colors flex items-center justify-between w-full cursor-pointer">
+            <span>ðŸ§  Jelasin Hop 05</span>
+            <span>&rarr;</span>
+          </button>
+        </div>
         </a>
 
         <div class="flex items-center text-zinc-600">&rarr;</div>
@@ -277,7 +306,12 @@
           </div>
           <div class="mt-3 pt-2 border-t border-zinc-800 text-[9px] font-mono text-zinc-400">
             GW 10.5.130.1 &middot; SVI L3
-          </div>
+          
+          <button onclick="openExplainerHop('06'); event.preventDefault(); event.stopPropagation();" class="mt-2 text-[9px] font-mono px-2 py-0.5 rounded bg-zinc-800/90 hover:bg-emerald-950 text-zinc-300 hover:text-emerald-300 border border-zinc-700 hover:border-emerald-700 transition-colors flex items-center justify-between w-full cursor-pointer">
+            <span>ðŸ§  Jelasin Hop 06</span>
+            <span>&rarr;</span>
+          </button>
+        </div>
         </a>
 
         <div class="flex items-center text-zinc-600">&rarr;</div>
@@ -295,7 +329,12 @@
           </div>
           <div class="mt-3 pt-2 border-t border-zinc-800 text-[9px] font-mono text-zinc-400">
             CAPWAP &middot; NAT .118
-          </div>
+          
+          <button onclick="openExplainerHop('07'); event.preventDefault(); event.stopPropagation();" class="mt-2 text-[9px] font-mono px-2 py-0.5 rounded bg-zinc-800/90 hover:bg-emerald-950 text-zinc-300 hover:text-emerald-300 border border-zinc-700 hover:border-emerald-700 transition-colors flex items-center justify-between w-full cursor-pointer">
+            <span>ðŸ§  Jelasin Hop 07</span>
+            <span>&rarr;</span>
+          </button>
+        </div>
         </a>
 
         <div class="flex items-center text-zinc-600">&rarr;</div>
@@ -313,7 +352,12 @@
           </div>
           <div class="mt-3 pt-2 border-t border-zinc-800 text-[9px] font-mono text-zinc-400">
             Subscriber QoS &amp; BAS
-          </div>
+          
+          <button onclick="openExplainerHop('08'); event.preventDefault(); event.stopPropagation();" class="mt-2 text-[9px] font-mono px-2 py-0.5 rounded bg-zinc-800/90 hover:bg-emerald-950 text-zinc-300 hover:text-emerald-300 border border-zinc-700 hover:border-emerald-700 transition-colors flex items-center justify-between w-full cursor-pointer">
+            <span>ðŸ§  Jelasin Hop 08</span>
+            <span>&rarr;</span>
+          </button>
+        </div>
         </a>
 
         <div class="flex items-center text-zinc-600">&rarr;</div>
@@ -331,7 +375,12 @@
           </div>
           <div class="mt-3 pt-2 border-t border-zinc-800 text-[9px] font-mono text-zinc-400">
             welcome2.wifi.id &amp; BGP
-          </div>
+          
+          <button onclick="openExplainerHop('09'); event.preventDefault(); event.stopPropagation();" class="mt-2 text-[9px] font-mono px-2 py-0.5 rounded bg-zinc-800/90 hover:bg-emerald-950 text-zinc-300 hover:text-emerald-300 border border-zinc-700 hover:border-emerald-700 transition-colors flex items-center justify-between w-full cursor-pointer">
+            <span>ðŸ§  Jelasin Hop 09</span>
+            <span>&rarr;</span>
+          </button>
+        </div>
         </a>
 
       </div>
@@ -1035,7 +1084,7 @@
         <div class="flex items-center gap-3">
           <span class="w-8 h-8 rounded-xl bg-white text-black font-mono font-bold text-xs flex items-center justify-center">01</span>
           <div>
-            <h3 class="text-base font-bold text-white">HOP 01 &middot; Access Point (Cisco C9105AXI-F)</h3>
+            <h3 class="text-base font-bold text-white">HOP 01 &middot; Access Point (Cisco C9105AXI-F) <button onclick="openExplainerHop('01')" class="ml-2 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-800 text-[10px] font-mono text-emerald-300 hover:text-white transition-colors cursor-pointer align-middle"><span>ðŸ§  Jelasin</span></button></h3>
             <p class="text-xs text-zinc-400 font-mono">GSGSK00415/TLK-WI31871627-0001 &bull; MAC: C8:28:E5:8A:EE:18</p>
           </div>
         </div>
@@ -1086,7 +1135,7 @@
         <div class="flex items-center gap-3">
           <span class="w-8 h-8 rounded-xl bg-white text-black font-mono font-bold text-xs flex items-center justify-center">02</span>
           <div>
-            <h3 class="text-base font-bold text-white">HOP 02 &middot; Modem Optical Network Terminal (ONT ZTE F609)</h3>
+            <h3 class="text-base font-bold text-white">HOP 02 &middot; Modem Optical Network Terminal (ONT ZTE F609) <button onclick="openExplainerHop('02')" class="ml-2 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-800 text-[10px] font-mono text-emerald-300 hover:text-white transition-colors cursor-pointer align-middle"><span>ðŸ§  Jelasin</span></button></h3>
             <p class="text-xs text-zinc-400 font-mono">SN: ZTEGCF054F69 &bull; Port OLT: gpon-onu_1/8/16:7 &bull; Jarak: 6332m</p>
           </div>
         </div>
@@ -1194,7 +1243,7 @@ pon-onu-mng gpon-onu_1/8/16:7
         <div class="flex items-center gap-3">
           <span class="w-8 h-8 rounded-xl bg-white text-black font-mono font-bold text-xs flex items-center justify-center">03</span>
           <div>
-            <h3 class="text-base font-bold text-white">HOP 03 &middot; Optical Line Terminal (ZTE ZXPON C300v2)</h3>
+            <h3 class="text-base font-bold text-white">HOP 03 &middot; Optical Line Terminal (ZTE ZXPON C300v2) <button onclick="openExplainerHop('03')" class="ml-2 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-800 text-[10px] font-mono text-emerald-300 hover:text-white transition-colors cursor-pointer align-middle"><span>ðŸ§  Jelasin</span></button></h3>
             <p class="text-xs text-zinc-400 font-mono">GPON04-D5-GSK-3 &bull; IP: 172.27.142.133 &bull; Uplink: xgei_1/10/1</p>
           </div>
         </div>
@@ -1304,7 +1353,7 @@ xgei_1/10/1 is up,  line protocol is up,  detect status is OK
         <div class="flex items-center gap-3">
           <span class="w-8 h-8 rounded-xl bg-white text-black font-mono font-bold text-xs flex items-center justify-center">04</span>
           <div>
-            <h3 class="text-base font-bold text-white">HOP 04 &middot; Metro Ethernet Akses (Huawei ME-D5-GS)</h3>
+            <h3 class="text-base font-bold text-white">HOP 04 &middot; Metro Ethernet Akses (Huawei ME-D5-GS) <button onclick="openExplainerHop('04')" class="ml-2 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-800 text-[10px] font-mono text-emerald-300 hover:text-white transition-colors cursor-pointer align-middle"><span>ðŸ§  Jelasin</span></button></h3>
             <p class="text-xs text-zinc-400 font-mono">Host: &lt;ME-D5-GS&gt; &bull; Port: Eth-Trunk2.195 &bull; VSI: WIFI_6_SBU_2851</p>
           </div>
         </div>
@@ -1378,7 +1427,7 @@ Eth-Trunk300.195                    WIFI_6_SBU_2851                 up    up
         <div class="flex items-center gap-3">
           <span class="w-8 h-8 rounded-xl bg-white text-black font-mono font-bold text-xs flex items-center justify-center">05</span>
           <div>
-            <h3 class="text-base font-bold text-white">HOP 05 &middot; Metro Ethernet Core Tier-1 (Huawei CX600-X16A)</h3>
+            <h3 class="text-base font-bold text-white">HOP 05 &middot; Metro Ethernet Core Tier-1 (Huawei CX600-X16A) <button onclick="openExplainerHop('05')" class="ml-2 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-800 text-[10px] font-mono text-emerald-300 hover:text-white transition-colors cursor-pointer align-middle"><span>ðŸ§  Jelasin</span></button></h3>
             <p class="text-xs text-zinc-400 font-mono">Node: ME9-D5-KBL(TIER-1) &bull; STO Kebalen, Witel SBU &bull; Downlink: Eth-Trunk23</p>
           </div>
         </div>
@@ -1441,7 +1490,7 @@ return</pre>
         <div class="flex items-center gap-3">
           <span class="w-8 h-8 rounded-xl bg-white text-black font-mono font-bold text-xs flex items-center justify-center">06</span>
           <div>
-            <h3 class="text-base font-bold text-white">HOP 06 &middot; Switch Aggregator Layer 3 (Cisco Catalyst)</h3>
+            <h3 class="text-base font-bold text-white">HOP 06 &middot; Switch Aggregator Layer 3 (Cisco Catalyst) <button onclick="openExplainerHop('06')" class="ml-2 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-800 text-[10px] font-mono text-emerald-300 hover:text-white transition-colors cursor-pointer align-middle"><span>ðŸ§  Jelasin</span></button></h3>
             <p class="text-xs text-zinc-400 font-mono">SWAGGR-D5-KBL-CS &bull; IP: 10.16.56.129 (NAT: 172.18.65.116) &bull; SVI Vlan2851 &bull; LAG Po10</p>
           </div>
         </div>
@@ -1710,7 +1759,7 @@ Te1/0/5: <span class="text-zinc-500">DOWN (notconnect)</span> &bull; Port cadang
         <div class="flex items-center gap-3">
           <span class="w-8 h-8 rounded-xl bg-white text-black font-mono font-bold text-xs flex items-center justify-center">07</span>
           <div>
-            <h3 class="text-base font-bold text-white">HOP 07 &middot; Wireless LAN Controller (Cisco WAC / WLC)</h3>
+            <h3 class="text-base font-bold text-white">HOP 07 &middot; Wireless LAN Controller (Cisco WAC / WLC) <button onclick="openExplainerHop('07')" class="ml-2 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-800 text-[10px] font-mono text-emerald-300 hover:text-white transition-colors cursor-pointer align-middle"><span>ðŸ§  Jelasin</span></button></h3>
             <p class="text-xs text-zinc-400 font-mono">WLC02-D5-KBL-CS &bull; IP: 10.16.56.131 (NAT: 172.18.65.118) &bull; AireOS v8.10.196.0</p>
           </div>
         </div>
@@ -1867,7 +1916,7 @@ Te1/0/5: <span class="text-zinc-500">DOWN (notconnect)</span> &bull; Port cadang
         <div class="flex items-center gap-3">
           <span class="w-8 h-8 rounded-xl bg-white text-black font-mono font-bold text-xs flex items-center justify-center">08</span>
           <div>
-            <h3 class="text-base font-bold text-white">HOP 08 &middot; Wireless Access Gateway (Huawei WAG / BNG)</h3>
+            <h3 class="text-base font-bold text-white">HOP 08 &middot; Wireless Access Gateway (Huawei WAG / BNG) <button onclick="openExplainerHop('08')" class="ml-2 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-800 text-[10px] font-mono text-emerald-300 hover:text-white transition-colors cursor-pointer align-middle"><span>ðŸ§  Jelasin</span></button></h3>
             <p class="text-xs text-zinc-400 font-mono">WAG-D5-KBL &bull; Huawei NE / ME60 Multiservice BNG &bull; Downlink GE6/0/0 (10G) ke SWAGGR &amp; WAC</p>
           </div>
         </div>
@@ -1977,7 +2026,7 @@ GE6/0/0(10G)                  up      down     DOWNLINK TO WAC06-D5-KBL-CS
         <div class="flex items-center gap-3">
           <span class="w-8 h-8 rounded-xl bg-white text-black font-mono font-bold text-xs flex items-center justify-center">09</span>
           <div>
-            <h3 class="text-base font-bold text-white">HOP 09 &middot; Internet Core Gateway (PE / BRAS &amp; AAA Portal WPGEN)</h3>
+            <h3 class="text-base font-bold text-white">HOP 09 &middot; Internet Core Gateway (PE / BRAS &amp; AAA Portal WPGEN) <button onclick="openExplainerHop('09')" class="ml-2 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-800 text-[10px] font-mono text-emerald-300 hover:text-white transition-colors cursor-pointer align-middle"><span>ðŸ§  Jelasin</span></button></h3>
             <p class="text-xs text-zinc-400 font-mono">PE-D5-KBL-HSI &bull; Provider Edge Router &bull; 3x Interconnect Trunks dari WAG-D5-KBL &bull; AAA welcome2.wifi.id</p>
           </div>
         </div>
