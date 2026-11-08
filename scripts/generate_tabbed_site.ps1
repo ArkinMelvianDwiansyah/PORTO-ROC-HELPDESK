@@ -1031,8 +1031,8 @@ $fullTpl = @'
     <!-- Drawer Header -->
     <div class="p-5 border-b border-zinc-800 bg-zinc-900/70 flex items-center justify-between shrink-0">
       <div class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-xl bg-emerald-500/20 border border-emerald-500/50 flex items-center justify-center text-emerald-400 font-black font-mono text-base shadow-sm">
-          ðŸ§ 
+        <div class="w-9 h-9 rounded-xl bg-emerald-500/20 border border-emerald-500/50 flex items-center justify-center text-emerald-400 font-mono shadow-sm">
+          <svg class="w-5 h-5 text-emerald-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M12 3v18"/><path d="M12 8a2 2 0 0 0-2 2"/><path d="M12 13a2 2 0 0 1 2 2"/></svg>
         </div>
         <div>
           <div class="flex items-center gap-2">
