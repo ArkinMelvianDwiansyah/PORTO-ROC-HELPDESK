@@ -362,19 +362,25 @@
               <p class="text-[10px] font-mono text-emerald-400">GPON04-D5-GSK-3 &bull; Slot 1/8/16:7 &bull; smartgroup1 (20G)</p>
             </div>
           </div>
-          <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">Central GPON</span>
+          <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-emerald-950 border border-emerald-800 text-emerald-300 font-bold">OLT LIVE VERIFIED</span>
         </div>
         <div class="space-y-3 text-xs leading-relaxed text-zinc-300 font-sans">
           <div class="p-3 rounded-xl bg-zinc-950 border border-zinc-800/80 space-y-1">
-            <div class="font-mono text-emerald-400 font-bold text-[11px]">&bull; 1. Service-Port Mapping &amp; Pembongkaran GEMPORT</div>
+            <div class="font-mono text-emerald-400 font-bold text-[11px]">&bull; 1. Pembuktian MAC AP Tembus ke OLT (vport 1 VLAN 195)</div>
             <p class="text-zinc-400 text-[11px]">
-              Perintah <code class="text-emerald-400 font-mono">service-port 3 vport 1 user-vlan 195 vlan 195</code> memetakan aliran GEMPORT virtual port 1 dari linecard GTGH langsung ke VLAN 195 di switch backplane OLT. MAC AP <code class="text-white font-mono">c828.e58a.ee18</code> dicatat pada tabel distributed forwarding slot 8.
+              Perintah live <code class="text-emerald-400 font-mono">show mac gpon onu gpon-onu_1/8/16:7</code> membuktikan secara presisi bahwa frame <strong class="text-white font-mono">c828.e58a.ee18</strong> dipelajari secara dinamis pada <strong class="text-emerald-300 font-mono">vport 1 (VLAN 195)</strong>, sedangkan vport 2 dialokasikan untuk VLAN 877 (TR-069 ACS). Port LAN 1 modem (<code class="text-white font-mono">eth_0/1</code>) bernegosiasi pada kecepatan penuh <strong class="text-white">full-1000 Gigabit</strong>.
             </p>
           </div>
           <div class="p-3 rounded-xl bg-zinc-950 border border-zinc-800/80 space-y-1">
-            <div class="font-mono text-emerald-400 font-bold text-[11px]">&bull; 2. Pipa Agregasi 20 Gbps Smartgroup1</div>
+            <div class="font-mono text-emerald-400 font-bold text-[11px]">&bull; 2. Metrik Fisik: Jarak 6.332m &amp; Redaman Sehat -21.19 dBm</div>
             <p class="text-zinc-400 text-[11px]">
-              Frame VLAN 195 di-trunk keluar melalui port-channel uplink <strong class="text-white">smartgroup1</strong> (anggota port optik 10GE: <code class="text-zinc-300 font-mono">xgei_1/10/1</code>, <code class="text-zinc-300 font-mono">xgei_1/10/2</code>, dan <code class="text-zinc-300 font-mono">xgei_1/11/1</code>) menuju Metro Akses. Pengecekan interface mencatat <strong class="text-emerald-400">0 CRC Error dan 0 Drop</strong>.
+              Output <code class="text-white font-mono">show pon power attenuation</code> mencatat daya terima RX laser di ONT sebesar <strong class="text-emerald-400 font-mono">-21.192 dBm</strong> (total atenuasi 24.8 dB) pada jarak tempuh fiber optik <strong class="text-white font-mono">6.332 meter</strong>. Counter status OLT mencatat waktu operasional aktif <strong class="text-emerald-300">working 100 jam nonstop</strong> tanpa alarm LOS.
+            </p>
+          </div>
+          <div class="p-3 rounded-xl bg-zinc-950 border border-zinc-800/80 space-y-1">
+            <div class="font-mono text-emerald-400 font-bold text-[11px]">&bull; 3. Agregasi 20 Gbps Smartgroup1 ke Metro</div>
+            <p class="text-zinc-400 text-[11px]">
+              Trafik VLAN 195 dari AP dialirkan keluar via trunking LAG optik <strong class="text-white font-mono">smartgroup1</strong> (2x 10GE LACP xgei_1/10/1-2) menuju port fisik router Metro Akses <code class="text-zinc-300 font-mono">ME-D5-GS</code>.
             </p>
           </div>
         </div>
@@ -386,23 +392,23 @@
           <div class="flex items-center gap-2.5">
             <span class="w-7 h-7 rounded-xl bg-white text-black font-mono font-bold text-xs flex items-center justify-center">04</span>
             <div>
-              <h4 class="text-sm font-bold text-white">HOP 04 &middot; Metro Akses (Huawei CX600)</h4>
-              <p class="text-[10px] font-mono text-emerald-400">ME-D5-GSK-3 (STO Gresik) &bull; Sub-Int: Eth-Trunk2.195</p>
+              <h4 class="text-sm font-bold text-white">HOP 04 &middot; Metro Akses (Huawei ME-D5-GS)</h4>
+              <p class="text-[10px] font-mono text-emerald-400">Host: &lt;ME-D5-GS&gt; &bull; Sub-Int: Eth-Trunk2.195 &bull; VSI: WIFI_6_SBU_2851</p>
             </div>
           </div>
-          <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">MPLS VPLS Ingress</span>
+          <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-emerald-950 border border-emerald-800 text-emerald-300 font-bold">LDP PEER 172.31.64.106</span>
         </div>
         <div class="space-y-3 text-xs leading-relaxed text-zinc-300 font-sans">
           <div class="p-3 rounded-xl bg-zinc-950 border border-zinc-800/80 space-y-1">
-            <div class="font-mono text-emerald-400 font-bold text-[11px]">&bull; 1. Masuk ke Virtual Switch Instance (VSI)</div>
+            <div class="font-mono text-emerald-400 font-bold text-[11px]">&bull; 1. Pembuktian MAC AP di Eth-Trunk2.195 (Slot 1, 2, 3)</div>
             <p class="text-zinc-400 text-[11px]">
-              Sub-interface <code class="text-white font-mono">Eth-Trunk2.195</code> menerima frame tagged 195 dari OLT. Perintah <code class="text-emerald-400 font-mono">control-vid 195 dot1q-termination</code> mengakhiri frame L2 fisik dan memasukkannya ke dalam switch virtual: <strong class="text-white font-mono">vsi WIFI_6_SBU_2851</strong> (vsi-id: 245132851).
+              CLI live <code class="text-white font-mono">display mac-address vsi WIFI_6_SBU_2851</code> mengonfirmasi bahwa MAC <strong class="text-emerald-400 font-mono">c828-e58a-ee18</strong> dipelajari secara dinamis pada sub-interface <strong class="text-white font-mono">Eth-Trunk2.195</strong> (VLAN 195) di seluruh kartu linecard (slot 1 s/d 3). Sub-interface ini telah berstatus UP selama <strong class="text-white font-mono">1.383 hari</strong>.
             </p>
           </div>
           <div class="p-3 rounded-xl bg-zinc-950 border border-zinc-800/80 space-y-1">
-            <div class="font-mono text-emerald-400 font-bold text-[11px]">&bull; 2. Mengapa Namanya 2851 Padahal Inputnya 195?</div>
+            <div class="font-mono text-emerald-400 font-bold text-[11px]">&bull; 2. Enkapsulasi Terowongan LDP Pseudowire (Local Label 53766)</div>
             <p class="text-zinc-400 text-[11px]">
-              Inilah kunci standarisasi Telkom: VLAN 195 adalah VLAN lokal akses di OLT Gresik, namun ketika masuk ke terowongan MPLS backbone, seluruh stream AP WiFi 6 se-Regional disiapkan untuk keluar menjadi <strong class="text-white">VLAN 2851</strong> di sentral Surabaya Kebalen.
+              VSI <code class="text-emerald-400 font-mono">WIFI_6_SBU_2851</code> (VSI ID: 245132851) membungkus frame Ethernet AP ke dalam terowongan LDP Pseudowire menuju Core Kebalen (<code class="text-white font-mono">172.31.64.106</code>) menggunakan Local VC Label <strong class="text-emerald-300 font-mono">53766</strong> dan Tunnel ID <code class="text-zinc-300 font-mono">0x0000000001004c791c</code> via <code class="text-white font-mono">Eth-Trunk162</code>.
             </p>
           </div>
         </div>
@@ -414,23 +420,23 @@
           <div class="flex items-center gap-2.5">
             <span class="w-7 h-7 rounded-xl bg-white text-black font-mono font-bold text-xs flex items-center justify-center">05</span>
             <div>
-              <h4 class="text-sm font-bold text-white">HOP 05 &middot; Metro Core Tier-1 (Huawei CX600)</h4>
-              <p class="text-[10px] font-mono text-emerald-400">ME9-D5-KBL (STO Kebalen) &bull; Downlink: Eth-Trunk23.2851</p>
+              <h4 class="text-sm font-bold text-white">HOP 05 &middot; Metro Core Tier-1 (Huawei ME9-D5-KBL-OLD)</h4>
+              <p class="text-[10px] font-mono text-emerald-400">Node: ME9-D5-KBL-OLD (STO Kebalen) &bull; Downlink: Eth-Trunk23.2851</p>
             </div>
           </div>
-          <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">MPLS VPLS Egress</span>
+          <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-emerald-950 border border-emerald-800 text-emerald-300 font-bold">LDP PEER 172.31.64.15</span>
         </div>
         <div class="space-y-3 text-xs leading-relaxed text-zinc-300 font-sans">
           <div class="p-3 rounded-xl bg-zinc-950 border border-zinc-800/80 space-y-1">
-            <div class="font-mono text-emerald-400 font-bold text-[11px]">&bull; 1. Melepas Label MPLS &amp; Translasi ke VLAN 2851</div>
+            <div class="font-mono text-emerald-400 font-bold text-[11px]">&bull; 1. Pembuktian Frame AP Tiba dari Gresik via Terowongan Eth-Trunk105</div>
             <p class="text-zinc-400 text-[11px]">
-              Router Core Kebalen menerima paket MPLS dari IP <code class="text-white font-mono">172.31.64.15</code> (Metro Akses Gresik), memvalidasi VSI ID 245132851, melepas label MPLS (pop label), dan menyalurkannya keluar melalui <code class="text-emerald-400 font-mono">Eth-Trunk23.2851</code> dengan tag fisik <strong class="text-white">dot1q 2851</strong>.
+              CLI <code class="text-white font-mono">display mac-address vsi WIFI_6_SBU_2851</code> di router Core Kebalen menunjukkan entri presisi: <strong class="text-emerald-400 font-mono">c828-e58a-ee18</strong> tiba melalui interface terowongan MPLS <strong class="text-white font-mono">Eth-Trunk105</strong> (LSP/Tunnel ID: 1/45960 dari Gresik).
             </p>
           </div>
           <div class="p-3 rounded-xl bg-zinc-950 border border-zinc-800/80 space-y-1">
-            <div class="font-mono text-emerald-400 font-bold text-[11px]">&bull; 2. Penghubung Antara Gresik &amp; Switch SWAGGR Kebalen</div>
+            <div class="font-mono text-emerald-400 font-bold text-[11px]">&bull; 2. Translasi Tag ke VLAN 2851 Menuju Po10 SWAGGR</div>
             <p class="text-zinc-400 text-[11px]">
-              Port fisik <code class="text-zinc-300 font-mono">Gi1/1/19</code> dan <code class="text-zinc-300 font-mono">Gi1/1/21</code> tercolok langsung ke transceiver 10G SWAGGR (<code class="text-white font-mono">Te1/0/1</code> dan <code class="text-white font-mono">Te1/0/2</code>), membentuk jalur pipa trunk berkapasitas 20 Gbps.
+              Label MPLS dilepas (pop label 122693), dan frame diserahkan ke sub-interface <code class="text-emerald-400 font-mono">Eth-Trunk23.2851</code> dengan tag fisik <strong class="text-white">VLAN 2851</strong>. Tabel MAC juga mencatat MAC fisik core switch SWAGGR (<code class="text-white font-mono">f4bd-9e32-8701</code> dan <code class="text-white font-mono">f4bd-9e32-8755</code>) ter-learning pada interface ini.
             </p>
           </div>
         </div>
@@ -4202,12 +4208,12 @@ Sn lama FGL1803X74U</p>
       </div>
       <span class="font-mono text-zinc-400 font-medium lowercase ml-1">JavaScript</span>
     </div>
-    <button onclick="copyCode('code_ec734ecf685f4b58a62cad9444628229', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
+    <button onclick="copyCode('code_ae2a0c4c7f76455395f68348b232a38d', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
       <span>Salin</span>
     </button>
   </div>
-  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_ec734ecf685f4b58a62cad9444628229">ketemu nih gaez, ini data lengkap-nya &#240;Ÿ˜‰
+  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_ae2a0c4c7f76455395f68348b232a38d">ketemu nih gaez, ini data lengkap-nya &#240;Ÿ˜‰
 
 apmac = 00:06:F6:C8:D6:9B
 apsn = FGL1704S3GH
@@ -5068,12 +5074,12 @@ Masalah nya berada di Pengaturan ( port dhcp locating di ONT ) yang belom tercek
       </div>
       <span class="font-mono text-zinc-400 font-medium lowercase ml-1">JavaScript</span>
     </div>
-    <button onclick="copyCode('code_de7f28ee465349149ef51a6dd3336f63', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
+    <button onclick="copyCode('code_d9f7b0a324c340be952d57ae5450c433', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
       <span>Salin</span>
     </button>
   </div>
-  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_de7f28ee465349149ef51a6dd3336f63">GPON08-D5-UBU-3#show running-config-interface gpon_onu-1/3/15:23
+  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_d9f7b0a324c340be952d57ae5450c433">GPON08-D5-UBU-3#show running-config-interface gpon_onu-1/3/15:23
 !&lt;if-intf&gt;
 interface gpon_onu-1/3/15:23
 $
@@ -5144,12 +5150,12 @@ GPON08-D5-UBU-3#</code></pre>
       </div>
       <span class="font-mono text-zinc-400 font-medium lowercase ml-1">JavaScript</span>
     </div>
-    <button onclick="copyCode('code_9bff539a05224e2390898fcd7cd72d70', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
+    <button onclick="copyCode('code_0a82d174eb384765b16c5dd13e061df8', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
       <span>Salin</span>
     </button>
   </div>
-  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_9bff539a05224e2390898fcd7cd72d70">GPON06-D5-UBU-3#show onu running config gpon-onu_1/7/11:29
+  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_0a82d174eb384765b16c5dd13e061df8">GPON06-D5-UBU-3#show onu running config gpon-onu_1/7/11:29
 pon-onu-mng gpon-onu_1/7/11:29
 service WMS gemport 1 vlan 4090
 service VOIP gemport 2 vlan 100
@@ -5858,12 +5864,12 @@ LINK : </p>
       </div>
       <span class="font-mono text-zinc-400 font-medium lowercase ml-1">JavaScript</span>
     </div>
-    <button onclick="copyCode('code_47772098323446c680cb44f5bdd92b04', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
+    <button onclick="copyCode('code_3d564c980ffc4ea58da329521e29d90f', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
       <span>Salin</span>
     </button>
   </div>
-  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_47772098323446c680cb44f5bdd92b04">ketemu nih gaez, ini data lengkap-nya &#240;Ÿ˜‰
+  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_3d564c980ffc4ea58da329521e29d90f">ketemu nih gaez, ini data lengkap-nya &#240;Ÿ˜‰
 
 apmac = 18:E7:28:1A:10:5F
 apsn = FGL1804X662
@@ -5906,12 +5912,12 @@ jointime = 0:00:13.820000</code></pre>
       </div>
       <span class="font-mono text-zinc-400 font-medium lowercase ml-1">JavaScript</span>
     </div>
-    <button onclick="copyCode('code_b9aef6add78144bfa1b9af55d01cde39', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
+    <button onclick="copyCode('code_7d79d46b16f448a0911bc6858ad87eac', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
       <span>Salin</span>
     </button>
   </div>
-  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_b9aef6add78144bfa1b9af55d01cde39">WAC01-D5-KBL-CS#show mac address-table address ?
+  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_7d79d46b16f448a0911bc6858ad87eac">WAC01-D5-KBL-CS#show mac address-table address ?
   H.H.H  48 bit mac address
 
 WAC01-D5-KBL-CS#show mac address-table address 18:E7:28:1A:10:5F
@@ -5987,12 +5993,12 @@ Internet  10.13.125.239         250   c064.e440.1560  ARPA   Vlan2858</code></pr
       </div>
       <span class="font-mono text-zinc-400 font-medium lowercase ml-1">JavaScript</span>
     </div>
-    <button onclick="copyCode('code_7b6cb2485f9746a3bad0fc7cca602c6c', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
+    <button onclick="copyCode('code_c97edcdcdc35471bbb6c4d63ee3d8820', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
       <span>Salin</span>
     </button>
   </div>
-  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_7b6cb2485f9746a3bad0fc7cca602c6c">WAC01-D5-KBL-CS#show interfaces te4/1
+  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_c97edcdcdc35471bbb6c4d63ee3d8820">WAC01-D5-KBL-CS#show interfaces te4/1
 TenGigabitEthernet4/1 is up, line protocol is up (connected) 
   Hardware is C6k 10000Mb 802.3, address is 0006.f6b2.2c80 (bia 0006.f6b2.2c80)
   Description: DOWNLINK to ME2-D5-KBL Gi2/1/0  &lt;=== Metro dan Interface portnya
@@ -6037,12 +6043,12 @@ WAC01-D5-KBL-CS#</code></pre>
       </div>
       <span class="font-mono text-zinc-400 font-medium lowercase ml-1">JavaScript</span>
     </div>
-    <button onclick="copyCode('code_0afaba29abaf442eb5f2f2aaebbf2570', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
+    <button onclick="copyCode('code_e81deadc18d343aab2ff05d8dc72549b', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
       <span>Salin</span>
     </button>
   </div>
-  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_0afaba29abaf442eb5f2f2aaebbf2570">&lt;ME2-D5-KBL&gt;dis cur int Gi2/1/0 
+  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_e81deadc18d343aab2ff05d8dc72549b">&lt;ME2-D5-KBL&gt;dis cur int Gi2/1/0 
 #
 interface GigabitEthernet2/1/0
  description TRUNK_ME2-D5-KBL/GE-2/1/0/__TO_WAC-5SBY-KBL01(10.16.132.7)CISCO
@@ -6081,12 +6087,12 @@ show link peer interface atasnya </code></pre>
       </div>
       <span class="font-mono text-zinc-400 font-medium lowercase ml-1">JavaScript</span>
     </div>
-    <button onclick="copyCode('code_633f1673d75e45d59b3ea815090c17ea', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
+    <button onclick="copyCode('code_0144b68777974da5bb4ced433b4fe60d', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
       <span>Salin</span>
     </button>
   </div>
-  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_633f1673d75e45d59b3ea815090c17ea">&lt;ME9-D5-KBL&gt;display mac-address dynamic vsi WAC_2888
+  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_0144b68777974da5bb4ced433b4fe60d">&lt;ME9-D5-KBL&gt;display mac-address dynamic vsi WAC_2888
 
 MAC Address    VLAN/BD/                        PEVLAN CEVLAN Port/Peerip                        Type      LSP/LSR-ID
                VSI/SI/EVPN                                                                                MAC-Tunnel
@@ -6858,6 +6864,41 @@ b4e9-b0c9-4b00 WAC_2888                        2888   -      GE3/1/6.2888       
             </div>
             <p class="text-[11px] text-zinc-400 mt-1 leading-relaxed">Broadband Remote Access Server yang menghubungkan jaringan pelanggan ke Internet global dengan routing BGP dan Carrier-Grade NAT (CGNAT).</p>
           </div>
+          <div class="glossary-item p-3 rounded-xl bg-zinc-900/60 border border-zinc-800/80">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-bold text-white">WP-WMS (wms.wifi.id)</span>
+              <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-emerald-950/80 text-emerald-300 border border-emerald-800">Captive Platform</span>
+            </div>
+            <p class="text-[11px] text-zinc-400 mt-1 leading-relaxed">Platform manajemen sentral Telkom untuk mengelola profil landing page, kata sandi venue, SID, dan konfigurasi captive portal 107.000+ venue WMS se-Indonesia.</p>
+          </div>
+          <div class="glossary-item p-3 rounded-xl bg-zinc-900/60 border border-zinc-800/80">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-bold text-white">Pseudowire (PW) &amp; VC Label</span>
+              <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-400">MPLS L2VPN</span>
+            </div>
+            <p class="text-[11px] text-zinc-400 mt-1 leading-relaxed">Terowongan virtual point-to-point emulasi Ethernet di atas backbone MPLS berbasis pasangan VC Label LDP (misal VC ID 245132851 dengan label 53766 di Gresik dan 122693 di Kebalen).</p>
+          </div>
+          <div class="glossary-item p-3 rounded-xl bg-zinc-900/60 border border-zinc-800/80">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-bold text-white">vport (Virtual Port GPON)</span>
+              <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-400">OLT ZTE</span>
+            </div>
+            <p class="text-[11px] text-zinc-400 mt-1 leading-relaxed">Sub-kanal logika di dalam port GPON ONU pada OLT ZTE untuk pemisahan multi-layanan (vport 1 untuk data nirkabel AP VLAN 195, vport 2 untuk TR-069 VLAN 877).</p>
+          </div>
+          <div class="glossary-item p-3 rounded-xl bg-zinc-900/60 border border-zinc-800/80">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-bold text-white">Autologin Session (602.000s)</span>
+              <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-400">WMS Service</span>
+            </div>
+            <p class="text-[11px] text-zinc-400 mt-1 leading-relaxed">Fitur caching MAC address klien di gateway WAG selama 602.000 detik (~7 hari) sehingga pengunjung warkop yang sudah diautentikasi tidak perlu memasukkan sandi berulang kali.</p>
+          </div>
+          <div class="glossary-item p-3 rounded-xl bg-zinc-900/60 border border-zinc-800/80">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-bold text-white">ARP Binding (Address Resolution)</span>
+              <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-400">Layer 3 Core</span>
+            </div>
+            <p class="text-[11px] text-zinc-400 mt-1 leading-relaxed">Tabel pemetaan alamat IP Layer 3 (10.5.130.154) ke alamat hardware fisik MAC Layer 2 (c828.e58a.ee18) pada SVI Vlan2851 switch core SWAGGR.</p>
+          </div>
         </div>
       </div>
 
@@ -6866,7 +6907,7 @@ b4e9-b0c9-4b00 WAC_2888                        2888   -      GE3/1/6.2888       
     <!-- Drawer Footer -->
     <div class="p-4 border-t border-zinc-800 bg-zinc-900/50 flex items-center justify-between text-[11px] font-mono text-zinc-400">
       <span>Tekan <kbd class="px-1.5 py-0.5 rounded bg-zinc-800 border border-zinc-700 text-zinc-300">ESC</kbd> untuk menutup</span>
-      <span class="text-emerald-400 font-semibold">25+ Istilah Jaringan</span>
+      <span class="text-emerald-400 font-semibold">30+ Istilah Jaringan</span>
     </div>
 
   </aside>
