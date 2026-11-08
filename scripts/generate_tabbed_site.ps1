@@ -1259,6 +1259,13 @@ $fullTpl = @'
         </div>
       </div>
 
+                <div class="p-3 rounded-xl bg-zinc-950 border border-zinc-800/80 space-y-1">
+            <div class="font-mono text-emerald-400 font-bold text-[11px]">&bull; 4. Analisis Beban Utilitas Port (Show Controllers Utilization)</div>
+            <p class="text-zinc-400 text-[11px]">
+              Berdasarkan live controller audit dari Mas Adi: Port <code class="text-emerald-400 font-mono">Te1/0/4</code> ke WLC02 mencatat utilisasi tertinggi (<strong class="text-white font-mono">Rx 40% / Tx 39%</strong>) karena mengangkut CAPWAP 8.909 klien aktif. Port <code class="text-emerald-400 font-mono">Te1/0/7</code> ke WAG mencatat Rx 34% untuk trafik downstream gateway. Rata-rata utilisasi switch hanya <strong class="text-emerald-400 font-mono">5%</strong>, sehingga switch beroperasi sangat aman dengan headroom kapasitas 95%.
+            </p>
+          </div>
+
       <!-- CARD HOP 07 -->
       <div id="explainer-card-hop-07" class="explainer-hop-card p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 space-y-4">
         <div class="flex items-center justify-between pb-3 border-b border-zinc-800">
@@ -1838,6 +1845,27 @@ $fullTpl = @'
           el.classList.add('hidden');
         }
       });
+    }
+
+        // Master Matrix View Switcher (Table vs Cards)
+    function switchMatrixView(mode) {
+      const tblContainer = document.getElementById('matrix-table-container');
+      const gridContainer = document.getElementById('matrix-grid-container');
+      const btnTable = document.getElementById('btn-matrix-table-view');
+      const btnGrid = document.getElementById('btn-matrix-grid-view');
+      if (!tblContainer || !gridContainer) return;
+
+      if (mode === 'grid') {
+        tblContainer.classList.add('hidden');
+        gridContainer.classList.remove('hidden');
+        btnGrid.className = 'px-3 py-1.5 rounded-lg text-xs font-mono font-semibold transition-all flex items-center gap-1.5 bg-emerald-950 border border-emerald-700 text-emerald-300 cursor-pointer shadow-sm';
+        btnTable.className = 'px-3 py-1.5 rounded-lg text-xs font-mono font-semibold transition-all flex items-center gap-1.5 bg-transparent border border-transparent text-zinc-400 hover:text-white cursor-pointer';
+      } else {
+        gridContainer.classList.add('hidden');
+        tblContainer.classList.remove('hidden');
+        btnTable.className = 'px-3 py-1.5 rounded-lg text-xs font-mono font-semibold transition-all flex items-center gap-1.5 bg-emerald-950 border border-emerald-700 text-emerald-300 cursor-pointer shadow-sm';
+        btnGrid.className = 'px-3 py-1.5 rounded-lg text-xs font-mono font-semibold transition-all flex items-center gap-1.5 bg-transparent border border-transparent text-zinc-400 hover:text-white cursor-pointer';
+      }
     }
 
     // Lightbox Controller
