@@ -1362,6 +1362,12 @@ $fullTpl = @'
               Setelah diautentikasi, trafik dialirkan ke PE-D5-KBL-HSI. PE melakukan translasi IP private pelanggan ke IP publik melalui pool <strong class="text-white">Carrier-Grade NAT (CGNAT)</strong> dan merutekannya via eBGP peering AS7713 ke Tier-1 Gateway Surabaya menuju jaringan internet global.
             </p>
           </div>
+          <div class="p-3 rounded-xl bg-zinc-950 border border-zinc-800/80 space-y-1">
+            <div class="font-mono text-emerald-400 font-bold text-[11px]">&bull; 4. Integrasi Database WP-WMS (wms.wifi.id) &amp; Captive Portal</div>
+            <p class="text-zinc-400 text-[11px]">
+              Pada direktori sentral <code class="text-white font-mono">wms.wifi.id/wp-wms/list</code> (107.310 venue nasional), AP Warkop Koramil tercatat aktif dengan <strong class="text-emerald-400 font-mono">SID WI31871627</strong>, No AO <code class="text-zinc-300 font-mono">WI31871627SC13332929</code>, Witel SURAMADU, paket <strong class="text-white font-mono">MS SILVER</strong>, tipe <strong class="text-emerald-300 font-mono">Password Only (useronly)</strong>, dan masa sesi autologin <strong class="text-white font-mono">602.000 detik (~7 hari)</strong>. Ketika user menginput password venue di portal, RADIUS AAA memicu sinyal CoA UDP 3799 ke WAG untuk membuka firewall internet.
+            </p>
+          </div>
         </div>
       </div>
 

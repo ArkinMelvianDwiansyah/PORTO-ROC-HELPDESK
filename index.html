@@ -573,6 +573,12 @@
               Setelah diautentikasi, trafik dialirkan ke PE-D5-KBL-HSI. PE melakukan translasi IP private pelanggan ke IP publik melalui pool <strong class="text-white">Carrier-Grade NAT (CGNAT)</strong> dan merutekannya via eBGP peering AS7713 ke Tier-1 Gateway Surabaya menuju jaringan internet global.
             </p>
           </div>
+          <div class="p-3 rounded-xl bg-zinc-950 border border-zinc-800/80 space-y-1">
+            <div class="font-mono text-emerald-400 font-bold text-[11px]">&bull; 4. Integrasi Database WP-WMS (wms.wifi.id) &amp; Captive Portal</div>
+            <p class="text-zinc-400 text-[11px]">
+              Pada direktori sentral <code class="text-white font-mono">wms.wifi.id/wp-wms/list</code> (107.310 venue nasional), AP Warkop Koramil tercatat aktif dengan <strong class="text-emerald-400 font-mono">SID WI31871627</strong>, No AO <code class="text-zinc-300 font-mono">WI31871627SC13332929</code>, Witel SURAMADU, paket <strong class="text-white font-mono">MS SILVER</strong>, tipe <strong class="text-emerald-300 font-mono">Password Only (useronly)</strong>, dan masa sesi autologin <strong class="text-white font-mono">602.000 detik (~7 hari)</strong>. Ketika user menginput password venue di portal, RADIUS AAA memicu sinyal CoA UDP 3799 ke WAG untuk membuka firewall internet.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -705,16 +711,16 @@
       <div class="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800/80 space-y-2.5">
         <div class="text-[10px] font-mono uppercase tracking-wider text-zinc-400 font-semibold flex items-center justify-between">
           <span>02. PELANGGAN &amp; BISNIS</span>
-          <span class="text-zinc-400 font-mono text-[9px] px-1.5 py-0.5 rounded bg-zinc-800">WMS LITE</span>
+          <span class="text-emerald-400 font-mono text-[9px] px-1.5 py-0.5 rounded bg-emerald-950/60 border border-emerald-900">WP-WMS VERIFIED</span>
         </div>
         <div class="space-y-1.5 text-[11px]">
           <div><span class="text-zinc-500">Pelanggan:</span> <span class="text-white font-medium">WMS Warkop Koramil (M Usman)</span></div>
-          <div><span class="text-zinc-500 font-mono">No Internet:</span> <span class="text-zinc-200 font-mono">152420227462</span></div>
-          <div><span class="text-zinc-500 font-mono">Location ID:</span> <span class="text-zinc-200 font-mono">GSGSK00415</span></div>
-          <div><span class="text-zinc-500">Skema Bisnis:</span> <span class="text-zinc-300">MS Silver Consumer</span></div>
-          <div><span class="text-zinc-500">AP Group:</span> <span class="text-white font-mono font-medium">WARKOP_KORAMIL</span></div>
-          <div><span class="text-zinc-500">Regional / Witel:</span> <span class="text-zinc-300">Reg 5 / Surabaya Utara</span></div>
-          <div><span class="text-zinc-500">Klien Aktif:</span> <span class="text-emerald-400 font-semibold font-mono">13 User</span> <span class="text-[10px] text-zinc-400">(5 di 2.4G / 8 di 5G)</span></div>
+          <div><span class="text-zinc-500 font-mono">No Internet (ND):</span> <span class="text-emerald-400 font-mono font-semibold">152420227462</span></div>
+          <div><span class="text-zinc-500 font-mono">SID / No AO:</span> <span class="text-zinc-200 font-mono">WI31871627</span> <span class="text-[10px] text-zinc-500">/ SC13332929</span></div>
+          <div><span class="text-zinc-500 font-mono">Location ID:</span> <span class="text-white font-mono font-semibold">GSGSK00415</span></div>
+          <div><span class="text-zinc-500">Paket / Witel:</span> <span class="text-emerald-400 font-semibold">MS SILVER</span> <span class="text-zinc-400">&bull; Witel SURAMADU</span></div>
+          <div><span class="text-zinc-500">Tipe WP / Auth:</span> <span class="text-zinc-200">Password Only (useronly) &bull; Open</span></div>
+          <div><span class="text-zinc-500">Autologin:</span> <span class="text-emerald-300 font-mono">602.000 Detik (~7 Hari)</span></div>
         </div>
       </div>
 
@@ -3039,6 +3045,163 @@ GE6/0/0(10G)                  up      down     DOWNLINK TO WAC06-D5-KBL-CS
 
       </div>
 
+      <!-- EVIDENCE RIIL: DATABASE PORTAL WELCOME PAGE WMS (WMS.WIFI.ID / WP-WMS) -->
+      <div class="p-5 rounded-xl bg-zinc-900/60 border border-zinc-800 space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-zinc-800 gap-2">
+          <div>
+            <div class="text-[10px] font-mono text-emerald-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              PORTAL WPGEN / WP-WMS (wms.wifi.id) &bull; LIVE DATABASE EVIDENCE
+            </div>
+            <h4 class="text-sm font-bold text-white mt-0.5">Konfigurasi Captive Portal AAA Riil AP Warkop Koramil</h4>
+          </div>
+          <a href="https://wms.wifi.id/wp-wms/list" target="_blank" rel="noopener" class="px-2.5 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-zinc-300 hover:text-white text-xs font-mono flex items-center gap-1.5 transition-colors self-start sm:self-auto">
+            <span>wms.wifi.id/wp-wms/list</span>
+            <svg class="w-3.5 h-3.5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+        </div>
+
+        <p class="text-xs text-zinc-300 leading-relaxed font-sans">
+          Bukti autentik konfigurasi landing page / welcome page captive portal dari server sentral <strong class="text-white">wms.wifi.id</strong>. Menunjukkan integrasi penuh antara <strong class="text-emerald-400 font-mono">Location ID: GSGSK00415</strong> dan <strong class="text-emerald-400 font-mono">AP Name: GSGSK00415/TLK-WI31871627-0001</strong> dengan profil layanan pelanggan Telkom WMS Silver.
+        </p>
+
+        <!-- Screenshot Gallery (5 Images) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 pt-1">
+          
+          <!-- Image 1: Dashboard wms.wifi.id -->
+          <div class="space-y-1.5">
+            <div class="text-[10px] font-mono text-zinc-400 flex items-center justify-between">
+              <span>1. DASHBOARD WMS.WIFI.ID (NASIONAL)</span>
+              <span class="text-emerald-400 font-semibold">107k+ WP</span>
+            </div>
+            <div class="relative group rounded-xl overflow-hidden border border-zinc-800 bg-zinc-950">
+              <img src="assets/images/wpgen_wms_dashboard.png" alt="Dashboard WMS WiFi.id" class="w-full h-36 object-cover object-top filter grayscale group-hover:grayscale-0 transition-all cursor-pointer" onclick="openLightbox('assets/images/wpgen_wms_dashboard.png', 'Dashboard Sentral wms.wifi.id: Monitoring 107.310 Welcome Page aktif di seluruh Indonesia (Auth: 40k, Passthrough: 93k, Useronly: 229k, Violet: 11k)')" />
+              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                <span class="px-2 py-1 rounded bg-black/80 text-[10px] font-mono text-white border border-zinc-700">Perbesar</span>
+              </div>
+            </div>
+            <div class="text-[10px] text-zinc-500 font-mono">Total 229.296 venue ber-tipe Useronly</div>
+          </div>
+
+          <!-- Image 2: List WP WMS -->
+          <div class="space-y-1.5">
+            <div class="text-[10px] font-mono text-zinc-400 flex items-center justify-between">
+              <span>2. DIREKTORI LIST WP WMS</span>
+              <span class="text-zinc-400">Database</span>
+            </div>
+            <div class="relative group rounded-xl overflow-hidden border border-zinc-800 bg-zinc-950">
+              <img src="assets/images/wpgen_wms_list.png" alt="List WP WMS" class="w-full h-36 object-cover object-top filter grayscale group-hover:grayscale-0 transition-all cursor-pointer" onclick="openLightbox('assets/images/wpgen_wms_list.png', 'Direktori List WP WMS: Database 107.310 record venue terdaftar dengan kolom ND, SID, SSID, Loc ID, Regional, Type, Created At')" />
+              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                <span class="px-2 py-1 rounded bg-black/80 text-[10px] font-mono text-white border border-zinc-700">Perbesar</span>
+              </div>
+            </div>
+            <div class="text-[10px] text-zinc-500 font-mono">107.310 total record terindeks</div>
+          </div>
+
+          <!-- Image 3: Search Exact AP Warkop Koramil -->
+          <div class="space-y-1.5">
+            <div class="text-[10px] font-mono text-zinc-400 flex items-center justify-between">
+              <span>3. QUERY AP WARKOP KORAMIL</span>
+              <span class="text-emerald-400 font-bold">EXACT MATCH</span>
+            </div>
+            <div class="relative group rounded-xl overflow-hidden border border-emerald-900/60 bg-zinc-950">
+              <img src="assets/images/wpgen_wms_search_warkop.png" alt="Search AP Warkop Koramil" class="w-full h-36 object-cover object-center filter grayscale group-hover:grayscale-0 transition-all cursor-pointer" onclick="openLightbox('assets/images/wpgen_wms_search_warkop.png', 'Hasil Pencarian AP GSGSK00415/TLK-WI31871627-0001: Ditemukan 1 record aktif ND 152420227462 SID WI31871627 WMS WARKOP KORAMIL (M USMAN)')" />
+              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                <span class="px-2 py-1 rounded bg-black/80 text-[10px] font-mono text-white border border-zinc-700">Perbesar</span>
+              </div>
+            </div>
+            <div class="text-[10px] text-emerald-400 font-mono">ND: 152420227462 &bull; Type: Password Only</div>
+          </div>
+
+          <!-- Image 4: Detail Config Top (Form & Order) -->
+          <div class="space-y-1.5">
+            <div class="text-[10px] font-mono text-zinc-400 flex items-center justify-between">
+              <span>4. DETAIL PROFIL LAYANAN &amp; SID</span>
+              <span class="text-zinc-400">Form Part 1</span>
+            </div>
+            <div class="relative group rounded-xl overflow-hidden border border-zinc-800 bg-zinc-950">
+              <img src="assets/images/wpgen_wms_detail_top.png" alt="Detail WP WMS Part 1" class="w-full h-36 object-cover object-top filter grayscale group-hover:grayscale-0 transition-all cursor-pointer" onclick="openLightbox('assets/images/wpgen_wms_detail_top.png', 'Detail WP WMS Warkop Koramil Part 1: No AO NCX WI31871627SC13332929, Witel SURAMADU, Paket MS SILVER, Autologin 602000 detik')" />
+              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                <span class="px-2 py-1 rounded bg-black/80 text-[10px] font-mono text-white border border-zinc-700">Perbesar</span>
+              </div>
+            </div>
+            <div class="text-[10px] text-zinc-500 font-mono">No AO: WI31871627SC13332929 &bull; MS SILVER</div>
+          </div>
+
+          <!-- Image 5: Detail Config Bottom (Security, Template, Banner) -->
+          <div class="space-y-1.5 sm:col-span-2 lg:col-span-2">
+            <div class="text-[10px] font-mono text-zinc-400 flex items-center justify-between">
+              <span>5. DETAIL SECURITY TYPE (OPEN), TIPE WP (USERONLY) &amp; BANNER VENUE</span>
+              <span class="text-zinc-400">Form Part 2</span>
+            </div>
+            <div class="relative group rounded-xl overflow-hidden border border-zinc-800 bg-zinc-950">
+              <img src="assets/images/wpgen_wms_detail_bottom.png" alt="Detail WP WMS Part 2" class="w-full h-36 object-cover object-top filter grayscale group-hover:grayscale-0 transition-all cursor-pointer" onclick="openLightbox('assets/images/wpgen_wms_detail_bottom.png', 'Detail WP WMS Warkop Koramil Part 2: Security Type Open, Tipe WP useronly (Password Only), Banner Cafe Custom, Title welcome, Password')" />
+              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                <span class="px-2 py-1 rounded bg-black/80 text-[10px] font-mono text-white border border-zinc-700">Perbesar</span>
+              </div>
+            </div>
+            <div class="text-[10px] text-zinc-500 font-mono">Security Type: Open &bull; Tipe WP: useronly &bull; Autologin: 7 Hari</div>
+          </div>
+
+        </div>
+
+        <!-- Tabel Ringkasan Datek Layanan WMS dari Portal WPGEN -->
+        <div class="overflow-x-auto rounded-xl border border-zinc-800 bg-black/40">
+          <table class="w-full text-left text-xs font-mono border-collapse">
+            <thead>
+              <tr class="bg-zinc-900/80 text-zinc-400 border-b border-zinc-800 text-[10px] uppercase">
+                <th class="p-2.5 font-semibold">Parameter Portal</th>
+                <th class="p-2.5 font-semibold text-white">Nilai Konfigurasi Riil</th>
+                <th class="p-2.5 font-semibold text-emerald-400">Korelasi Teknis End-to-End</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-zinc-800/60 text-[11px] text-zinc-300">
+              <tr>
+                <td class="p-2.5 text-zinc-400">AP Name (Location Mapping)</td>
+                <td class="p-2.5 font-bold text-white">GSGSK00415/TLK-WI31871627-0001</td>
+                <td class="p-2.5 text-zinc-400">Dicocokkan oleh WAG &amp; WLC (Hop 07 &amp; 08) saat memanggil URL redirection welcome page</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 text-zinc-400">Location ID (LOC ID)</td>
+                <td class="p-2.5 font-bold text-emerald-400">GSGSK00415</td>
+                <td class="p-2.5 text-zinc-400">Kunci pencarian utama pada database AAA RADIUS untuk menyajikan profil Warkop Koramil</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 text-zinc-400">SID / No Jastel (ND)</td>
+                <td class="p-2.5 text-white font-semibold">WI31871627 &bull; 152420227462</td>
+                <td class="p-2.5 text-zinc-400">Identitas nomor billing pelanggan Telkom WMS untuk pemesanan &amp; buka isolir (Bukis)</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 text-zinc-400">No AO NCX / NOSFF</td>
+                <td class="p-2.5 text-zinc-300">WI31871627SC13332929</td>
+                <td class="p-2.5 text-zinc-400">Nomor Service Order order provisioning aktif di sistem NOS Telkom</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 text-zinc-400">Witel &amp; Alamat Venue</td>
+                <td class="p-2.5 text-zinc-300">SURAMADU (Gresik Sukomulyo)</td>
+                <td class="p-2.5 text-zinc-400">Area kerja Witel Surabaya-Madura &bull; OLT GPON04-D5-GSK-3 (Gresik)</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 text-zinc-400">Paket Layanan</td>
+                <td class="p-2.5 text-emerald-400 font-bold">MS SILVER</td>
+                <td class="p-2.5 text-zinc-400">Profil bandwidth shaping QoS yang di-push oleh RADIUS ke WAG (CoA UDP 3799)</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 text-zinc-400">Security Type &amp; Tipe WP</td>
+                <td class="p-2.5 text-white font-semibold">Open &bull; Password Only (useronly)</td>
+                <td class="p-2.5 text-zinc-400">SSID tanpa enkripsi WPA2; otentikasi ditangani via web captive portal satu sandi venue</td>
+              </tr>
+              <tr>
+                <td class="p-2.5 text-zinc-400">Autologin &amp; Session Time</td>
+                <td class="p-2.5 text-emerald-300">Yes &bull; 602.000 Detik (~7 Hari)</td>
+                <td class="p-2.5 text-zinc-400">MAC klien disimpan di session cache WAG selama 7 hari sebelum dipaksa re-login</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
     </div>
 
   </div>
@@ -3972,12 +4135,12 @@ Sn lama FGL1803X74U</p>
       </div>
       <span class="font-mono text-zinc-400 font-medium lowercase ml-1">JavaScript</span>
     </div>
-    <button onclick="copyCode('code_a88d20867db24c66a743977b84eb59ba', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
+    <button onclick="copyCode('code_afd8ba9f908c430b95bf7193c3df4be4', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
       <span>Salin</span>
     </button>
   </div>
-  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_a88d20867db24c66a743977b84eb59ba">ketemu nih gaez, ini data lengkap-nya &#240;Ÿ˜‰
+  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_afd8ba9f908c430b95bf7193c3df4be4">ketemu nih gaez, ini data lengkap-nya &#240;Ÿ˜‰
 
 apmac = 00:06:F6:C8:D6:9B
 apsn = FGL1704S3GH
@@ -4838,12 +5001,12 @@ Masalah nya berada di Pengaturan ( port dhcp locating di ONT ) yang belom tercek
       </div>
       <span class="font-mono text-zinc-400 font-medium lowercase ml-1">JavaScript</span>
     </div>
-    <button onclick="copyCode('code_30033112551342b3b51385913e2621f2', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
+    <button onclick="copyCode('code_6f4ac88daed6487b8a137c5161a7582e', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
       <span>Salin</span>
     </button>
   </div>
-  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_30033112551342b3b51385913e2621f2">GPON08-D5-UBU-3#show running-config-interface gpon_onu-1/3/15:23
+  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_6f4ac88daed6487b8a137c5161a7582e">GPON08-D5-UBU-3#show running-config-interface gpon_onu-1/3/15:23
 !&lt;if-intf&gt;
 interface gpon_onu-1/3/15:23
 $
@@ -4914,12 +5077,12 @@ GPON08-D5-UBU-3#</code></pre>
       </div>
       <span class="font-mono text-zinc-400 font-medium lowercase ml-1">JavaScript</span>
     </div>
-    <button onclick="copyCode('code_bcf4858958ce4332b1644213a3854572', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
+    <button onclick="copyCode('code_8d1b995f450f4d1da43d88d0ed5bafd6', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
       <span>Salin</span>
     </button>
   </div>
-  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_bcf4858958ce4332b1644213a3854572">GPON06-D5-UBU-3#show onu running config gpon-onu_1/7/11:29
+  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_8d1b995f450f4d1da43d88d0ed5bafd6">GPON06-D5-UBU-3#show onu running config gpon-onu_1/7/11:29
 pon-onu-mng gpon-onu_1/7/11:29
 service WMS gemport 1 vlan 4090
 service VOIP gemport 2 vlan 100
@@ -5628,12 +5791,12 @@ LINK : </p>
       </div>
       <span class="font-mono text-zinc-400 font-medium lowercase ml-1">JavaScript</span>
     </div>
-    <button onclick="copyCode('code_994854ea9acf472a9e4bb5c89a1f4c12', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
+    <button onclick="copyCode('code_310e36a1c36945c2b2c91dfde69ed7e5', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
       <span>Salin</span>
     </button>
   </div>
-  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_994854ea9acf472a9e4bb5c89a1f4c12">ketemu nih gaez, ini data lengkap-nya &#240;Ÿ˜‰
+  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_310e36a1c36945c2b2c91dfde69ed7e5">ketemu nih gaez, ini data lengkap-nya &#240;Ÿ˜‰
 
 apmac = 18:E7:28:1A:10:5F
 apsn = FGL1804X662
@@ -5676,12 +5839,12 @@ jointime = 0:00:13.820000</code></pre>
       </div>
       <span class="font-mono text-zinc-400 font-medium lowercase ml-1">JavaScript</span>
     </div>
-    <button onclick="copyCode('code_c167d54b3da74d54b1ac3c7bd5058f40', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
+    <button onclick="copyCode('code_499da4b3905f4693b17f55a12c92f650', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
       <span>Salin</span>
     </button>
   </div>
-  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_c167d54b3da74d54b1ac3c7bd5058f40">WAC01-D5-KBL-CS#show mac address-table address ?
+  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_499da4b3905f4693b17f55a12c92f650">WAC01-D5-KBL-CS#show mac address-table address ?
   H.H.H  48 bit mac address
 
 WAC01-D5-KBL-CS#show mac address-table address 18:E7:28:1A:10:5F
@@ -5757,12 +5920,12 @@ Internet  10.13.125.239         250   c064.e440.1560  ARPA   Vlan2858</code></pr
       </div>
       <span class="font-mono text-zinc-400 font-medium lowercase ml-1">JavaScript</span>
     </div>
-    <button onclick="copyCode('code_bf4ce84db46b403ab069272ed539ee3a', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
+    <button onclick="copyCode('code_8b45888a3d97407086aa83632d9cc762', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
       <span>Salin</span>
     </button>
   </div>
-  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_bf4ce84db46b403ab069272ed539ee3a">WAC01-D5-KBL-CS#show interfaces te4/1
+  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_8b45888a3d97407086aa83632d9cc762">WAC01-D5-KBL-CS#show interfaces te4/1
 TenGigabitEthernet4/1 is up, line protocol is up (connected) 
   Hardware is C6k 10000Mb 802.3, address is 0006.f6b2.2c80 (bia 0006.f6b2.2c80)
   Description: DOWNLINK to ME2-D5-KBL Gi2/1/0  &lt;=== Metro dan Interface portnya
@@ -5807,12 +5970,12 @@ WAC01-D5-KBL-CS#</code></pre>
       </div>
       <span class="font-mono text-zinc-400 font-medium lowercase ml-1">JavaScript</span>
     </div>
-    <button onclick="copyCode('code_f9c6885b979341b4937de0a89fca9bde', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
+    <button onclick="copyCode('code_39d94d287d6d4ef9ae9dfa47b14814a5', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
       <span>Salin</span>
     </button>
   </div>
-  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_f9c6885b979341b4937de0a89fca9bde">&lt;ME2-D5-KBL&gt;dis cur int Gi2/1/0 
+  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_39d94d287d6d4ef9ae9dfa47b14814a5">&lt;ME2-D5-KBL&gt;dis cur int Gi2/1/0 
 #
 interface GigabitEthernet2/1/0
  description TRUNK_ME2-D5-KBL/GE-2/1/0/__TO_WAC-5SBY-KBL01(10.16.132.7)CISCO
@@ -5851,12 +6014,12 @@ show link peer interface atasnya </code></pre>
       </div>
       <span class="font-mono text-zinc-400 font-medium lowercase ml-1">JavaScript</span>
     </div>
-    <button onclick="copyCode('code_c23cf5bf0732414fb08789965650b031', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
+    <button onclick="copyCode('code_4ad6ea6ba0594bbe8d009e278d600d92', this)" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-all text-[11px] font-mono cursor-pointer border border-zinc-700/60 hover:border-zinc-600">
       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
       <span>Salin</span>
     </button>
   </div>
-  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_c23cf5bf0732414fb08789965650b031">&lt;ME9-D5-KBL&gt;display mac-address dynamic vsi WAC_2888
+  <pre class="p-4 text-xs font-mono text-zinc-200 overflow-x-auto leading-relaxed"><code id="code_4ad6ea6ba0594bbe8d009e278d600d92">&lt;ME9-D5-KBL&gt;display mac-address dynamic vsi WAC_2888
 
 MAC Address    VLAN/BD/                        PEVLAN CEVLAN Port/Peerip                        Type      LSP/LSR-ID
                VSI/SI/EVPN                                                                                MAC-Tunnel
