@@ -1020,7 +1020,7 @@ $fullTpl = @'
     </aside>
 
   <!-- ============================================================ -->
-  <!-- "JELASIN DONG! ðŸ§ " DEEP EXPLAINER SLIDE-OUT DRAWER -->
+  <!-- "EXPLANATION" DEEP TECHNICAL SLIDE-OUT DRAWER -->
   <!-- ============================================================ -->
   <!-- Explainer Backdrop -->
   <div id="explainer-backdrop" onclick="toggleExplainer()" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden transition-opacity duration-500 ease-in-out"></div>
@@ -1036,7 +1036,7 @@ $fullTpl = @'
         </div>
         <div>
           <div class="flex items-center gap-2">
-            <h3 class="text-base font-bold text-white tracking-tight">JELASIN DONG!</h3>
+            <h3 class="text-base font-bold text-white tracking-tight">EXPLANATION</h3>
             <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-emerald-950 border border-emerald-800 text-emerald-300 font-bold">DEEP DIVE 9 HOPS</span>
           </div>
           <p class="text-[11px] font-mono text-zinc-400">Bedah Teknis Mendalam, Alur Data, &amp; Problem Solving Lapangan</p>
@@ -1370,7 +1370,7 @@ $fullTpl = @'
     <!-- Drawer Footer -->
     <div class="p-4 border-t border-zinc-800 bg-zinc-900/50 flex items-center justify-between text-[11px] font-mono text-zinc-400 shrink-0">
       <span>Tekan <kbd class="px-1.5 py-0.5 rounded bg-zinc-800 border border-zinc-700 text-zinc-300">ESC</kbd> untuk menutup</span>
-      <span class="text-emerald-400 font-semibold">9 Hops E2E Explainer Ready</span>
+      <span class="text-emerald-400 font-semibold">9 Hops E2E Technical Explanation Ready</span>
     </div>
 
   </aside>
@@ -1760,7 +1760,7 @@ $fullTpl = @'
     }
 
     // Glossary Controller (Slow smooth slide-out animation)
-        // Explainer "Jelasin Dong! ðŸ§ " Controller
+        // Explainer "Explanation" Controller
     function toggleExplainer() {
       const drawer = document.getElementById('explainer-drawer');
       const backdrop = document.getElementById('explainer-backdrop');
