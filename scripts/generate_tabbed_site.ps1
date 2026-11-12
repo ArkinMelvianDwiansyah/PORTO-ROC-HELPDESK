@@ -1,4 +1,4 @@
-﻿# UTF-8 Script to build the modular tabbed documentation site for WIFI-ID NOTES ROC REGIONAL 5
+# UTF-8 Script to build the modular tabbed documentation site for WIFI-ID NOTES ROC REGIONAL 5
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 $rootDir = Split-Path -Parent $PSScriptRoot
@@ -1253,7 +1253,7 @@ $fullTpl = @'
           <div class="p-3 rounded-xl bg-zinc-950 border border-zinc-800/80 space-y-1">
             <div class="font-mono text-emerald-400 font-bold text-[11px]">&bull; 2. Exact Match 99 Dynamic MAC di Port-channel10</div>
             <p class="text-zinc-400 text-[11px]">
-              Dari output live Mas Adi: perintah <code class="text-zinc-200 font-mono">show mac address-table vlan 2851</code> mencatat 99 MAC dinamis pada <code class="text-white font-mono">Po10</code>, termasuk <strong class="text-emerald-400 font-mono">c828.e58a.ee18 DYNAMIC Po10</strong>. Ini bukti tak terbantahkan bahwa paket melintasi OLT &amp; Metro tanpa dropped!
+              Dari output live lapangan: perintah <code class="text-zinc-200 font-mono">show mac address-table vlan 2851</code> mencatat 99 MAC dinamis pada <code class="text-white font-mono">Po10</code>, termasuk <strong class="text-emerald-400 font-mono">c828.e58a.ee18 DYNAMIC Po10</strong>. Ini bukti tak terbantahkan bahwa paket melintasi OLT &amp; Metro tanpa dropped!
             </p>
           </div>
           <div class="p-3 rounded-xl bg-zinc-950 border border-zinc-800/80 space-y-1">
@@ -1268,7 +1268,7 @@ $fullTpl = @'
                 <div class="p-3 rounded-xl bg-zinc-950 border border-zinc-800/80 space-y-1">
             <div class="font-mono text-emerald-400 font-bold text-[11px]">&bull; 4. Analisis Beban Utilitas Port (Show Controllers Utilization)</div>
             <p class="text-zinc-400 text-[11px]">
-              Berdasarkan live controller audit dari Mas Adi: Port <code class="text-emerald-400 font-mono">Te1/0/4</code> ke WLC02 mencatat utilisasi tertinggi (<strong class="text-white font-mono">Rx 40% / Tx 39%</strong>) karena mengangkut CAPWAP 8.909 klien aktif. Port <code class="text-emerald-400 font-mono">Te1/0/7</code> ke WAG mencatat Rx 34% untuk trafik downstream gateway. Rata-rata utilisasi switch hanya <strong class="text-emerald-400 font-mono">5%</strong>, sehingga switch beroperasi sangat aman dengan headroom kapasitas 95%.
+              Berdasarkan live controller audit DATIN ROC: Port <code class="text-emerald-400 font-mono">Te1/0/4</code> ke WLC02 mencatat utilisasi tertinggi (<strong class="text-white font-mono">Rx 40% / Tx 39%</strong>) karena mengangkut CAPWAP 8.909 klien aktif. Port <code class="text-emerald-400 font-mono">Te1/0/7</code> ke WAG mencatat Rx 34% untuk trafik downstream gateway. Rata-rata utilisasi switch hanya <strong class="text-emerald-400 font-mono">5%</strong>, sehingga switch beroperasi sangat aman dengan headroom kapasitas 95%.
             </p>
           </div>
 

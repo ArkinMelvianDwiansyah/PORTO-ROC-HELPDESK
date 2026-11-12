@@ -1,7 +1,7 @@
 <USER_REQUEST>
 ada tambahan untuk swagr wag /portal dll nya ini saya berikan , masukan semua yang penting ga penting penting banget gapapa untuk detailing kayak kemaren 
 
-[07/11/2026 22:47] DATIN ROC Mas Adi Sudarto: SWAGGR-D5-KBL-CS#show interfaces te1/1/3
+[07/11/2026 22:47] DATIN ROC Engineer: SWAGGR-D5-KBL-CS#show interfaces te1/1/3
 TenGigabitEthernet1/1/3 is down, line protocol is down (notconnect) 
   Hardware is Ten Gigabit Ethernet, address is f4bd.9e32.870f (bia f4bd.9e32.870f)
   MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
@@ -81,7 +81,7 @@ TenGigabitEthernet1/1/2 is up, line protocol is up (connected)
      10813919 packets input, 1418018292 bytes, 0 no buffer
      Received 10422635 broadcasts (10422466 multicasts)
      0 runts, 0 giants, 0 throttles
-[07/11/2026 22:47] DATIN ROC Mas Adi Sudarto: 0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+[07/11/2026 22:47] DATIN ROC Engineer: 0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
      0 watchdog, 10422466 multicast, 0 pause input
      0 input packets with dribble condition detected
      141101812 packets output, 15137973247 bytes, 0 underruns
@@ -162,7 +162,7 @@ VLAN Name                             Status    Ports
 2873 VL_AP_WLC02_KBL_WIFI6_2873       active    
 2874 VL_AP_WLC02_KBL_WIFI6_2874       active    
 2875 VL_AP_WLC02_KBL_WIFI6_2875       active
-[07/11/2026 22:47] DATIN ROC Mas Adi Sudarto: 2880 VL_AP_WLC02_KBL_WIFI6_2880       active    
+[07/11/2026 22:47] DATIN ROC Engineer: 2880 VL_AP_WLC02_KBL_WIFI6_2880       active    
 2881 VL_AP_WLC02_KBL_WIFI6_2881       active    
 2882 VL_AP_WLC02_KBL_WIFI6_2882       active    
 2883 VL_AP_WLC02_KBL_WIFI6_2883       active    
@@ -236,7 +236,7 @@ SWAGGR-D5-KBL-CS#sho mac address-table vlan ?
 SWAGGR-D5-KBL-CS#sho mac address-table vlan 2851
           Mac Address Table
 -------------------------------------------
-[07/11/2026 22:47] DATIN ROC Mas Adi Sudarto: Vlan    Mac Address       Type        Ports
+[07/11/2026 22:47] DATIN ROC Engineer: Vlan    Mac Address       Type        Ports
 ----    -----------       --------    -----
 2851    0072.7828.1a88    DYNAMIC     Po10
 2851    0072.7828.2210    DYNAMIC     Po10
@@ -331,7 +331,7 @@ SWAGGR-D5-KBL-CS#sho mac address-table vlan 2851
 2851    c884.a148.0ec8    DYNAMIC     Po10
 2851    c884.a14a.0c80    DYNAMIC     Po10
 2851    c884.a14a.2f70    DYNAMIC     Po10
-[07/11/2026 22:47] DATIN ROC Mas Adi Sudarto: 2851    f4bd.9e32.8755    STATIC      Vl2851 
+[07/11/2026 22:47] DATIN ROC Engineer: 2851    f4bd.9e32.8755    STATIC      Vl2851 
 2851    f8b7.e2c6.3950    DYNAMIC     Po10
 2851    f8b7.e2c8.47c0    DYNAMIC     Po10
 2851    f8b7.e2ca.2d40    DYNAMIC     Po10
@@ -416,7 +416,7 @@ SWAGGR-D5-KBL-CS#show inter de
 SWAGGR-D5-KBL-CS#show inter des
 SWAGGR-D5-KBL-CS#show inter description 
 Interface                      Status         Protocol Description
-[07/11/2026 22:47] DATIN ROC Mas Adi Sudarto: Vl1                            admin down     down     
+[07/11/2026 22:47] DATIN ROC Engineer: Vl1                            admin down     down     
 Vl535                          up             up       SWAGGR to PE P2P
 Vl580                          up             up       
 Vl2850                         up             up       INT-VL_AP_WLC02_KBL_WIFI6_2850
@@ -468,14 +468,14 @@ Te1/0/10                       down           down
 Te1/0/11                       down           down     
 Te1/0/12                       down           down     to-SW-NEXUS-PROCERA
 Te1/1/1                        up             up       TO WAC05-D5-KBL-CS Port MGMT
-[07/11/2026 22:47] DATIN ROC Mas Adi Sudarto: Te1/1/2                        up             up       TO WAC06-D5-KBL-CS Port MGMT
+[07/11/2026 22:47] DATIN ROC Engineer: Te1/1/2                        up             up       TO WAC06-D5-KBL-CS Port MGMT
 Te1/1/3                        down           down     
 Te1/1/4                        down           down     
 Po10                           up             up       LAG-DOWNLINK-ME9-D5-KBL-Eth-23
 Lo85401                        up             up       WLC01-D5-KBL-CS Port2 to WAG-D5-KBL Te 4/1/0
 Lo85402                        up             up       WLC02-D5-KBL-CS Port2 to WAG-D5-KBL Te 6/0/0
 SWAGGR-D5-KBL-CS#
-[07/11/2026 22:50] DATIN ROC Mas Adi Sudarto: SWAGGR-D5-KBL-CS#sho lldp neighbors 
+[07/11/2026 22:50] DATIN ROC Engineer: SWAGGR-D5-KBL-CS#sho lldp neighbors 
 Capability codes:
     (R) Router, (B) Bridge, (T) Telephone, (C) DOCSIS Cable Device
     (W) WLAN Access Point, (P) Repeater, (S) Station, (O) Other
@@ -488,7 +488,7 @@ WAG-D5-KBL          Te1/0/7        120        B,R             GigabitEthernet6/0
 Total entries displayed: 3
 
 SWAGGR-D5-KBL-CS#
-[07/11/2026 22:53] DATIN ROC Mas Adi Sudarto: WAG-D5-KBL>disp lldp neighbor  brief 
+[07/11/2026 22:53] DATIN ROC Engineer: WAG-D5-KBL>disp lldp neighbor  brief 
 Local Intf              Neighbor Dev         Neighbor Intf        Exptime (sec)
 ------------------------------------------------------------------------------- 
 GigabitEthernet1/0/0    PE-D5-KBL-HSI        654                            104
@@ -503,7 +503,7 @@ GigabitEthernet7/0/0    L2SW-5KBL-HW01       XGigabitEthernet1/0/10          91
 GigabitEthernet7/1/0    PE-D5-KBL-HSI        678                            119
 GigabitEthernet8/0/0    ME9-D5-KBL-OLD       GigabitEthernet7/1/3            95
 <WAG-D5-KBL>
-[07/11/2026 22:55] DATIN ROC Mas Adi Sudarto: WAG-D5-KBL>disp inte des | in 6/0/0
+[07/11/2026 22:55] DATIN ROC Engineer: WAG-D5-KBL>disp inte des | in 6/0/0
 PHY: Physical
 *down: administratively down
 ^down: standby
@@ -525,7 +525,7 @@ GE6/0/0.1372                  up      up       SSID_wms TO WAC06-D5-KBL-CS
 GE6/0/0.1373                  up      up       ssid_biz_wms WLC02-D5-KBL-CS
 GE6/0/0.1378                  up      up       SSID_telkom.id TO WLC01-D5-KBL-CS
 GE6/0/0.1382                  up      up       SSID_WMS to WLC02-D5-KBL-CS direct WAG
-[07/11/2026 22:56] DATIN ROC Mas Adi Sudarto: WAG-D5-KBL>disp lldp neighbor  brief 
+[07/11/2026 22:56] DATIN ROC Engineer: WAG-D5-KBL>disp lldp neighbor  brief 
 Local Intf              Neighbor Dev         Neighbor Intf        Exptime (sec)
 ------------------------------------------------------------------------------- 
 GigabitEthernet1/0/0    PE-D5-KBL-HSI        654                            113

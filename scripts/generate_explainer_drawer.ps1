@@ -232,7 +232,7 @@ $explainerDrawerHtml = @'
           <div class="p-3 rounded-xl bg-zinc-950 border border-zinc-800/80 space-y-1">
             <div class="font-mono text-emerald-400 font-bold text-[11px]">&bull; 2. Exact Match 99 Dynamic MAC di Port-channel10</div>
             <p class="text-zinc-400 text-[11px]">
-              Dari output live Mas Adi: perintah <code class="text-zinc-200 font-mono">show mac address-table vlan 2851</code> mencatat 99 MAC dinamis pada <code class="text-white font-mono">Po10</code>, termasuk <strong class="text-emerald-400 font-mono">c828.e58a.ee18 DYNAMIC Po10</strong>. Ini bukti tak terbantahkan bahwa paket melintasi OLT &amp; Metro tanpa dropped!
+              Dari output live lapangan: perintah <code class="text-zinc-200 font-mono">show mac address-table vlan 2851</code> mencatat 99 MAC dinamis pada <code class="text-white font-mono">Po10</code>, termasuk <strong class="text-emerald-400 font-mono">c828.e58a.ee18 DYNAMIC Po10</strong>. Ini bukti tak terbantahkan bahwa paket melintasi OLT &amp; Metro tanpa dropped!
             </p>
           </div>
           <div class="p-3 rounded-xl bg-zinc-950 border border-zinc-800/80 space-y-1">

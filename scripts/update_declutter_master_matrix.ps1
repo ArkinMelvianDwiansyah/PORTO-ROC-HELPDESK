@@ -918,7 +918,7 @@ $explainerHop06Point4 = @"
           <div class="p-3 rounded-xl bg-zinc-950 border border-zinc-800/80 space-y-1">
             <div class="font-mono text-emerald-400 font-bold text-[11px]">&bull; 4. Analisis Beban Utilitas Port (Show Controllers Utilization)</div>
             <p class="text-zinc-400 text-[11px]">
-              Berdasarkan live controller audit dari Mas Adi: Port <code class="text-emerald-400 font-mono">Te1/0/4</code> ke WLC02 mencatat utilisasi tertinggi (<strong class="text-white font-mono">Rx 40% / Tx 39%</strong>) karena mengangkut CAPWAP 8.909 klien aktif. Port <code class="text-emerald-400 font-mono">Te1/0/7</code> ke WAG mencatat Rx 34% untuk trafik downstream gateway. Rata-rata utilisasi switch hanya <strong class="text-emerald-400 font-mono">5%</strong>, sehingga switch beroperasi sangat aman dengan headroom kapasitas 95%.
+              Berdasarkan live controller audit DATIN ROC: Port <code class="text-emerald-400 font-mono">Te1/0/4</code> ke WLC02 mencatat utilisasi tertinggi (<strong class="text-white font-mono">Rx 40% / Tx 39%</strong>) karena mengangkut CAPWAP 8.909 klien aktif. Port <code class="text-emerald-400 font-mono">Te1/0/7</code> ke WAG mencatat Rx 34% untuk trafik downstream gateway. Rata-rata utilisasi switch hanya <strong class="text-emerald-400 font-mono">5%</strong>, sehingga switch beroperasi sangat aman dengan headroom kapasitas 95%.
             </p>
           </div>
 "@
